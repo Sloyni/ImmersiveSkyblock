@@ -1,0 +1,86 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 520, Height: 580);
+
+  #Title {
+    $C.@Title { @Text = "View Homes"; }
+  }
+
+  #Content {
+    LayoutMode: Top;
+    Padding: (Full: 14);
+
+    Label #HomesViewerTitle {
+      Anchor: (Horizontal: 0, Height: 24, Bottom: 4);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 15, TextColor: #ffffff, RenderBold: true);
+      Text: "Homes";
+    }
+
+    Label #HomesViewerDescription {
+      Anchor: (Horizontal: 0, Height: 16, Bottom: 12);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+      Text: "";
+    }
+
+    Group #HomesViewerRow0 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName0 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport0 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow1 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName1 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport1 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow2 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName2 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport2 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow3 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName3 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport3 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow4 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName4 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport4 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow5 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName5 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport5 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow6 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName6 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport6 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow7 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName7 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport7 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow8 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName8 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport8 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+    Group #HomesViewerRow9 { Anchor: (Height: 48, Horizontal: 0, Bottom: 2); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Label #HomeViewerName9 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "home"; } }
+      TextButton #HomesViewerTeleport9 { Anchor: (Width: 104, Height: 30); Text: "Teleport"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); }
+    }
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 42, Top: 10);
+      LayoutMode: Right;
+      TextButton #HomesViewerBackButton {
+        Anchor: (Width: 120, Height: 36);
+        Text: "Back";
+        Style: (
+          Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+    }
+  }
+}

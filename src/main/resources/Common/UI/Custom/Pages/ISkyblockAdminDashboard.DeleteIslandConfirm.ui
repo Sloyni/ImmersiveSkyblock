@@ -1,0 +1,77 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@SecondaryTextButtonStyle = TextButtonStyle(
+  Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+  Sounds: $Sounds.@ButtonsLight
+);
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 520, Height: 300);
+
+  #Title {
+    $C.@Title { @Text = "Delete Island"; }
+  }
+
+  #Content {
+    LayoutMode: Top;
+    Padding: (Top: 22, Bottom: 22, Left: 24, Right: 24);
+
+    Label #DeleteIslandConfirmWarning {
+      Anchor: (Horizontal: 0, Height: 22, Bottom: 6);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 14, TextColor: #ff8080, RenderBold: true);
+      Text: "";
+    }
+
+    Label #DeleteIslandConfirmDescription {
+      Anchor: (Horizontal: 0, Height: 16, Bottom: 10);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #b49ca0);
+      Text: "";
+    }
+
+    Label #DeleteIslandConfirmIslandText {
+      Anchor: (Horizontal: 0, Height: 22, Bottom: 18);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 14, TextColor: #ffffff, RenderBold: true);
+      Text: "";
+    }
+
+    Label #DeleteIslandConfirmError {
+      Anchor: (Horizontal: 0, Height: 18, Bottom: 8);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ff7a7a, HorizontalAlignment: Center);
+      Text: "";
+      Visible: false;
+    }
+
+    Group {
+      Anchor: (Height: 70);
+    }
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 36);
+      LayoutMode: Left;
+
+      Group {
+        FlexWeight: 1;
+      }
+
+      TextButton #DeleteIslandConfirmCancel {
+        Anchor: (Height: 36, Right: 12);
+        Padding: (Horizontal: 18);
+        Text: "Cancel";
+        Style: @SecondaryTextButtonStyle;
+      }
+
+      TextButton #DeleteIslandConfirmConfirm {
+        Anchor: (Height: 36);
+        Padding: (Horizontal: 18);
+        Text: "Delete";
+        Style: @SecondaryTextButtonStyle;
+      }
+    }
+  }
+}

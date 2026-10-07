@@ -1,0 +1,193 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@LevelsSection = Group {
+  LayoutMode: Top;
+  Visible: false;
+
+  Group {
+    Anchor: (Horizontal: 0, Height: 1, Top: 10, Bottom: 14);
+    Background: (Color: #3a465c);
+  }
+
+  Group {
+    Anchor: (Horizontal: 0, Bottom: 12);
+    LayoutMode: Left;
+
+    Group {
+      FlexWeight: 1;
+      LayoutMode: Top;
+
+      Label #LevelsSectionTitle {
+        Anchor: (Horizontal: 0, Height: 26, Bottom: 2);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+        Text: "Levels";
+      }
+
+      Label #LevelsSectionDescription {
+        Anchor: (Horizontal: 0, Height: 18);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+        Text: "Manage level and block values for island calculation.";
+      }
+    }
+  }
+
+  Group #LevelsLevelValueRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 4);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Middle;
+      Label #LevelsLevelValueLabel { Anchor: (Horizontal: 0, Height: 22, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "Level value"; }
+    }
+
+    Group #LevelsLevelValueFieldBorder { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2);
+      $C.@TextField #LevelsLevelValueField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group #LevelsLevelValueApplyBox { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false;
+      Button #LevelsLevelValueApply { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); }
+    }
+  }
+
+  Group #LevelsDefaultBlockValueRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 8);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Middle;
+      Label #LevelsDefaultBlockValueLabel { Anchor: (Horizontal: 0, Height: 22, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "Default block value"; }
+    }
+
+    Group #LevelsDefaultBlockValueFieldBorder { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2);
+      $C.@TextField #LevelsDefaultBlockValueField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group #LevelsDefaultBlockValueApplyBox { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false;
+      Button #LevelsDefaultBlockValueApply { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); }
+    }
+  }
+
+  Group #LevelsTemplateValueRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 8);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group {
+      Anchor: (Width: 34, Right: 10);
+      LayoutMode: Middle;
+      $C.@CheckBox #LevelsTemplateValueToggle {
+        @Anchor = (Width: 22, Height: 22, Vertical: 0);
+        Value: false;
+      }
+    }
+
+    Group {
+      FlexWeight: 1;
+      Anchor: (Vertical: 0);
+      LayoutMode: Middle;
+
+      Label #LevelsTemplateValueLabel {
+        Anchor: (Horizontal: 0, Height: 22, Vertical: 0);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true);
+        Text: "Subtract template island value from level calculation";
+      }
+    }
+  }
+
+  Group {
+    Anchor: (Horizontal: 0, Bottom: 4);
+    LayoutMode: Top;
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 1, Top: 14, Bottom: 10);
+      Background: (Color: #3a465c);
+    }
+
+    Label #LevelsBlocksSectionTitle {
+      Anchor: (Horizontal: 0, Height: 26, Bottom: 4);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+      Text: "Configured block values";
+    }
+  }
+
+  Group #LevelsCreateRow {
+    Anchor: (Height: 52, Horizontal: 0, Bottom: 6);
+    LayoutMode: Left;
+    Background: (Color: #1a2738);
+    Padding: (Left: 10, Right: 10);
+
+    Group { 
+        FlexWeight: 3; 
+        Anchor: (Height: 32, Right: 8);
+      Padding: (Full: 2);
+      $C.@TextField #LevelsCreateBlockIdField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group { 
+        FlexWeight: 2;
+        Anchor: (Height: 32, Right: 8); 
+        Padding: (Full: 2);
+      $C.@TextField #LevelsCreateBlockValueField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    TextButton #LevelsCreateBlockButton {
+      Anchor: (Width: 112, Height: 32);
+      Text: "Create";
+      Style: (
+        Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Sounds: $Sounds.@ButtonsLight
+      );
+    }
+  }
+
+  Group #LevelsSearchRow {
+    Anchor: (Height: 52, Horizontal: 0, Bottom: 6);
+    LayoutMode: Left;
+    Background: (Color: #1a2738);
+    Padding: (Left: 10, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Height: 32, Right: 8);
+      $C.@TextField #LevelsSearchField { @Anchor = (Horizontal: 0, Height: 32, Vertical: 0); }
+    }
+
+    TextButton #LevelsSearchButton {
+      Anchor: (Width: 112, Height: 32);
+      Text: "Search";
+      Style: (
+        Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Sounds: $Sounds.@ButtonsLight
+      );
+    }
+  }
+
+  Label #LevelsSectionError {
+    Anchor: (Horizontal: 0, Height: 24, Top: 8);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ff5555, HorizontalAlignment: Center);
+    Text: "";
+    Visible: false;
+  }
+
+  Group #LevelsBlockRow0 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder0 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder0 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox0 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete0 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow1 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder1 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder1 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox1 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete1 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow2 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder2 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder2 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox2 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete2 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow3 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder3 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder3 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox3 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete3 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow4 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder4 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder4 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox4 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete4 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow5 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder5 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField5 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder5 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField5 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox5 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete5 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow6 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder6 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField6 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder6 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField6 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox6 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete6 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow7 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder7 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField7 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder7 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField7 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox7 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete7 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow8 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder8 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField8 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder8 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField8 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox8 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete8 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #LevelsBlockRow9 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #LevelsBlockIdFieldBorder9 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockIdField9 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockValueFieldBorder9 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #LevelsBlockValueField9 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #LevelsBlockApplyBox9 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #LevelsBlockApply9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #LevelsBlockDelete9 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+
+};
+
+

@@ -1,0 +1,160 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 620, Height: 620);
+
+  #Title {
+    $C.@Title { @Text = ""; }
+  }
+
+  #Content {
+    LayoutMode: Top;
+    Padding: (Full: 14);
+
+    Label #HomesGroupsTitle {
+      Anchor: (Horizontal: 0, Height: 24, Bottom: 4);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 15, TextColor: #ffffff, RenderBold: true);
+      Text: "";
+    }
+
+    Label #HomesGroupsDescription {
+      Anchor: (Horizontal: 0, Height: 16, Bottom: 10);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+      Text: "Configure les groupes (permissions iskyblock.homes.<group>).";
+    }
+
+    Label #HomesGroupsError {
+      Anchor: (Horizontal: 0, Height: 18, Bottom: 8);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #ff5555, HorizontalAlignment: Center);
+      Text: "";
+      Visible: false;
+    }
+
+    Group {
+      Anchor: (Height: 52, Horizontal: 0, Bottom: 8);
+      LayoutMode: Left;
+      Background: (Color: #182638);
+      Padding: (Left: 12, Right: 10);
+
+      Group {
+        FlexWeight: 3;
+        Anchor: (Height: 32, Right: 8);
+        Padding: (Full: 2);
+        $C.@TextField #HomesGroupCreateIdField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); PlaceholderText: ""; }
+      }
+
+      Group {
+        FlexWeight: 2;
+        Anchor: (Height: 32, Right: 8);
+        Padding: (Full: 2);
+        $C.@TextField #HomesGroupCreateHomesField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); PlaceholderText: ""; }
+      }
+
+      TextButton #HomesGroupCreateButton {
+        Anchor: (Width: 96, Height: 32);
+        Text: "Creer";
+        Style: (
+          Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+    }
+
+    Group #HomesGroupRow0 {
+      Anchor: (Height: 56, Horizontal: 0, Bottom: 4);
+      LayoutMode: Left;
+      Background: (Color: #223149);
+      Padding: (Left: 12, Right: 10);
+      Visible: false;
+
+      Group {
+        FlexWeight: 1;
+        Anchor: (Vertical: 0, Right: 8);
+        LayoutMode: Middle;
+        Group {
+          Anchor: (Horizontal: 0, Height: 36);
+          LayoutMode: Top;
+          Label #HomesGroupName0 {
+            Anchor: (Horizontal: 0, Height: 20);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true);
+            Text: "vip";
+          }
+          Label #HomesGroupPerm0 {
+            Anchor: (Horizontal: 0, Height: 16);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+            Text: "iskyblock.homes.vip";
+          }
+        }
+      }
+
+      Group #HomesGroupHomesFieldBorder0 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox0 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox0 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete0 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+
+    Group #HomesGroupRow1 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName1 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm1 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder1 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox1 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox1 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete1 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow2 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName2 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm2 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder2 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox2 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox2 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete2 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow3 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName3 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm3 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder3 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox3 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox3 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete3 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow4 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName4 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm4 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder4 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox4 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox4 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete4 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow5 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName5 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm5 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder5 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField5 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox5 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox5 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete5 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow6 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName6 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm6 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder6 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField6 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox6 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox6 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete6 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+    Group #HomesGroupRow7 { Anchor: (Height: 56, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+      Group { FlexWeight: 1; Anchor: (Vertical: 0, Right: 8); LayoutMode: Middle; Group { Anchor: (Horizontal: 0, Height: 36); LayoutMode: Top; Label #HomesGroupName7 { Anchor: (Horizontal: 0, Height: 20); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true); Text: "vip"; } Label #HomesGroupPerm7 { Anchor: (Horizontal: 0, Height: 16); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3); Text: "iskyblock.homes.vip"; } } }
+      Group #HomesGroupHomesFieldBorder7 { Anchor: (Width: 88, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #HomesGroupHomesField7 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } }
+      Group #HomesGroupApplyBox7 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #HomesGroupApply7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } }
+      Group #HomesGroupDeleteBox7 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #HomesGroupDelete7 { Anchor: (Width: 16, Height: 16, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #5a6d80))); } }
+    }
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 42, Top: 10);
+      LayoutMode: Right;
+      TextButton #HomesGroupsBackButton {
+        Anchor: (Width: 120, Height: 36);
+        Text: "Back";
+        Style: (
+          Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+    }
+  }
+}

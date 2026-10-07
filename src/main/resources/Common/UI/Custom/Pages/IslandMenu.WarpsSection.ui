@@ -1,0 +1,214 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+        @IslandMenuWarpsSection = Group {
+          Anchor: (Horizontal: 0, Vertical: 0);
+          LayoutMode: TopScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          Visible: false;
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 10);
+            LayoutMode: Top;
+
+            Label #WarpsSectionTitle {
+              Anchor: (Horizontal: 0, Height: 24);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+              Text: "Warps";
+            }
+
+            Label #WarpsSectionDescription {
+              Anchor: (Horizontal: 0, Height: 16, Top: 2);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+              Text: "Discover other players and manage your public warp.";
+            }
+          }
+
+          Group #WarpsOwnRow {
+            Anchor: (Height: 64, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+
+            Group {
+              FlexWeight: 1;
+              Anchor: (Vertical: 0, Right: 8);
+              LayoutMode: Middle;
+
+              Group {
+                Anchor: (Horizontal: 0, Vertical: 0);
+                LayoutMode: Top;
+
+                Label #WarpsOwnName {
+                  Anchor: (Horizontal: 0, Height: 18);
+                  Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderBold: true);
+                  Text: "Your island warp";
+                }
+
+                Label #WarpsOwnState {
+                  Anchor: (Horizontal: 0, Height: 16, Top: 2);
+                  Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2);
+                  Text: "No warp set yet.";
+                }
+
+                Label #WarpsManageHint {
+                  Anchor: (Horizontal: 0, Height: 14, Top: 2);
+                  Style: (...$C.@DefaultLabelStyle, FontSize: 10, TextColor: #caa77b);
+                  Text: "";
+                }
+              }
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            Group {
+              Anchor: (Height: 32, Vertical: 0);
+              LayoutMode: Left;
+
+              $C.@SmallSecondaryTextButton #BtnWarpSetOpen {
+                @Anchor = (Width: 130, Height: 32);
+                Text: "Set warp";
+                Visible: false;
+              }
+
+              $C.@SmallSecondaryTextButton #BtnWarpToggle {
+                @Anchor = (Width: 130, Height: 32);
+                Text: "Disable";
+                Visible: false;
+              }
+
+              Group { Anchor: (Width: 6); }
+
+              Group #WarpRenameBox {
+                Anchor: (Width: 32, Height: 32);
+                Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+                Visible: false;
+
+                Button #BtnWarpRenameIcon { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); }
+              }
+
+              Group { Anchor: (Width: 6); }
+
+              Group #WarpDeleteBox {
+                Anchor: (Width: 32, Height: 32);
+                Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+                Visible: false;
+
+                Button #BtnWarpDeleteIcon {
+                  Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0);
+                  Style: (
+                    Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)),
+                    Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)),
+                    Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)),
+                    Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))
+                  );
+                }
+              }
+            }
+          }
+
+          Group {
+            Anchor: (Horizontal: 0, Height: 1, Top: 8, Bottom: 10);
+            Background: (Color: #3a465c);
+          }
+
+          Group #WarpsSearchRow {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Padding: (Top: 6, Bottom: 6);
+
+            Group {
+              FlexWeight: 1;
+              Anchor: (Height: 32, Right: 8);
+              $C.@TextField #WarpsSearchField { @Anchor = (Horizontal: 0, Height: 32, Vertical: 0); }
+            }
+
+            $C.@SmallSecondaryTextButton #BtnWarpsSearch {
+              @Anchor = (Width: 120, Height: 32, Right: 6);
+              Text: "Search";
+            }
+
+            $C.@SmallSecondaryTextButton #BtnWarpsSearchClear {
+              @Anchor = (Width: 90, Height: 32);
+              Text: "Clear";
+            }
+          }
+
+          Label #WarpsSearchHint {
+            Anchor: (Horizontal: 0, Height: 16, Bottom: 6);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+            Text: "Top 10 most visited public warps";
+          }
+
+          Group #WarpsTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 10, Right: 10);
+
+            Label #WarpsHeaderWarp {
+              Anchor: (Width: 380, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Warp";
+            }
+
+            Label #WarpsHeaderVisits {
+              Anchor: (Width: 100, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Visits";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #WarpsHeaderAction {
+              Anchor: (Width: 90, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Action";
+            }
+          }
+
+          Label #WarpsEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No public warps available.";
+            Visible: false;
+          }
+
+          Group #WarpsRow0 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName0 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits0 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit0 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow1 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName1 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits1 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit1 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow2 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName2 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits2 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit2 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow3 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName3 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits3 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit3 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow4 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName4 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits4 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit4 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow5 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName5 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits5 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit5 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow6 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName6 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits6 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit6 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow7 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName7 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits7 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit7 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow8 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName8 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits8 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit8 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+          Group #WarpsRow9 { Anchor: (Height: 40, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #WarpName9 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #WarpVisits9 { Anchor: (Width: 100, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "0"; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnWarpVisit9 { @Anchor = (Width: 90, Height: 32); Text: "Visit"; } }
+
+          Group #WarpsPaginationRow {
+            Anchor: (Height: 34, Horizontal: 0, Bottom: 4);
+            LayoutMode: Middle;
+            Visible: false;
+
+            Group {
+              Anchor: (Width: 240, Height: 32, Vertical: 0);
+              LayoutMode: Left;
+
+              $C.@SmallSecondaryTextButton #BtnWarpsPrevPage {
+                @Anchor = (Width: 40, Height: 32, Right: 6);
+                Text: "<";
+              }
+
+              Label #WarpsPaginationLabel {
+                Anchor: (Width: 148, Height: 18, Vertical: 0, Right: 6);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, HorizontalAlignment: Center, VerticalAlignment: Center);
+                Text: "Page 1/1";
+              }
+
+              $C.@SmallSecondaryTextButton #BtnWarpsNextPage {
+                @Anchor = (Width: 40, Height: 32);
+                Text: ">";
+              }
+            }
+          }
+        };

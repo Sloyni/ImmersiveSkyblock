@@ -1,0 +1,207 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+        @IslandMenuHomesSection = Group {
+          Anchor: (Horizontal: 0, Vertical: 0);
+          LayoutMode: TopScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          Visible: false;
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 10);
+            LayoutMode: Left;
+
+            Group {
+              FlexWeight: 1;
+              LayoutMode: Top;
+
+              Label #HomesSectionTitle {
+                Anchor: (Horizontal: 0, Height: 24);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+                Text: "Homes";
+              }
+
+              Label #HomesSectionDescription {
+                Anchor: (Horizontal: 0, Height: 16, Top: 2);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+                Text: "Manage your island homes.";
+              }
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            $C.@SmallSecondaryTextButton #BtnHomesSetOpen {
+              @Anchor = (Width: 190, Height: 32);
+              Text: "Set home (0/0)";
+            }
+          }
+
+          Group #HomesTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 10, Right: 10);
+
+            Label #HomesHeaderHome {
+              Anchor: (Width: 330, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Home";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #HomesHeaderActions {
+              Anchor: (Width: 300, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Actions";
+            }
+          }
+
+          Label #HomesEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No homes created yet.";
+            Visible: false;
+          }
+
+          Group #HomesRow0 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName0 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox0 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox0 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo0 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow1 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName1 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox1 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox1 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo1 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow2 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName2 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox2 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox2 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo2 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow3 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName3 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox3 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox3 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo3 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow4 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName4 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox4 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox4 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo4 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow5 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName5 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox5 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox5 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo5 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow6 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName6 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox6 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox6 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo6 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow7 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName7 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox7 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox7 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo7 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow8 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName8 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox8 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox8 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo8 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+          Group #HomesRow9 {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #223149);
+            Padding: (Left: 10, Right: 10);
+            Visible: false;
+            Label #HomeName9 { Anchor: (Width: 330, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; }
+            Group { FlexWeight: 1; }
+            Group #HomeRenameBox9 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeRename9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); } }
+            Group { Anchor: (Width: 6); }
+            Group #HomeDeleteBox9 { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Button #BtnHomeDelete9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); } }
+            Group { Anchor: (Width: 6); }
+            $C.@SmallSecondaryTextButton #BtnHomeGo9 { @Anchor = (Width: 70, Height: 32); Text: "Go"; }
+          }
+        };

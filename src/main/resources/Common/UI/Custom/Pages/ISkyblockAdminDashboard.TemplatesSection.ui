@@ -1,0 +1,768 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@TemplatesSection = Group {
+        LayoutMode: Top;
+
+        Group {
+          Anchor: (Horizontal: 0, Height: 1, Top: 10, Bottom: 14);
+          Background: (Color: #3a465c);
+        }
+
+        Group {
+          Anchor: (Horizontal: 0, Bottom: 12);
+          LayoutMode: Left;
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Top;
+
+            Label #TemplatesSectionTitle {
+              Anchor: (Horizontal: 0, Height: 26, Bottom: 2);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+              Text: "Templates disponibles";
+            }
+
+            Label #TemplatesSectionDescription {
+              Anchor: (Horizontal: 0, Height: 18);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+              Text: "Activez, ordonnez, modifiez ou supprimez les templates existants.";
+            }
+          }
+
+          Group {
+            Anchor: (Width: 32, Height: 32, Top: 2);
+            Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+            Button #RefreshTemplates { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0);
+              Style: (
+                Default: (Background: (TexturePath: "../icons/reload.png", Color: #9bb4ce)),
+                Hovered: (Background: (TexturePath: "../icons/reload.png", Color: #ffffff)),
+                Pressed: (Background: (TexturePath: "../icons/reload.png", Color: #7f9cb9)),
+                Disabled: (Background: (TexturePath: "../icons/reload.png", Color: #5a6d80))
+              );
+            }
+          }
+        }
+
+      // === Template rows ===
+      Group #TplRow0 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled0 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName0 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId0 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox0 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox0 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox0 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox0 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError0 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow1 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled1 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName1 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId1 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox1 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox1 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox1 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox1 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError1 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow2 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled2 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName2 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId2 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox2 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox2 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox2 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox2 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError2 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow3 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled3 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName3 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId3 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox3 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox3 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox3 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox3 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError3 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow4 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled4 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName4 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId4 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox4 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox4 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox4 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox4 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError4 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow5 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled5 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName5 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId5 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox5 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox5 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox5 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox5 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError5 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow6 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled6 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName6 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId6 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox6 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox6 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox6 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox6 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError6 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow7 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled7 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName7 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId7 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox7 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox7 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox7 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox7 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError7 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow8 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled8 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName8 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId8 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox8 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox8 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox8 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox8 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError8 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow9 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled9 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName9 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId9 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox9 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox9 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox9 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox9 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError9 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow10 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled10 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName10 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId10 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox10 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp10 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox10 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown10 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox10 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit10 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox10 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete10 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError10 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow11 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled11 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName11 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId11 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox11 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp11 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox11 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown11 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox11 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit11 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox11 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete11 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError11 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow12 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled12 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName12 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId12 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox12 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp12 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox12 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown12 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox12 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit12 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox12 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete12 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError12 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow13 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled13 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName13 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId13 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox13 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp13 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox13 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown13 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox13 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit13 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox13 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete13 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError13 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow14 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled14 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName14 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId14 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox14 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp14 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox14 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown14 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox14 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit14 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox14 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete14 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError14 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow15 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled15 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName15 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId15 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox15 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp15 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox15 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown15 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox15 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit15 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox15 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete15 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError15 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow16 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled16 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName16 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId16 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox16 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp16 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox16 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown16 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox16 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit16 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox16 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete16 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError16 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow17 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled17 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName17 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId17 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox17 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp17 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox17 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown17 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox17 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit17 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox17 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete17 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError17 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow18 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled18 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName18 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId18 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox18 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp18 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox18 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown18 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox18 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit18 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox18 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete18 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError18 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      Group #TplRow19 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #TplEnabled19 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #TplName19 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #TplSubId19 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+        Group #TplUpBox19 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplUp19 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-top.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-top.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-top.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-top.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDownBox19 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplDown19 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/chevron-bottom.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplEditBox19 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+        Visible: false;
+        Button #TplEdit19 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))); Visible: false; }
+      }
+        Group #TplDeleteBox19 {
+        Anchor: (Width: 32, Height: 32, Right: 6);
+        Background: (TexturePath: "../Common/Buttons/Destructive.png", Border: 12);
+        Visible: false;
+        Button #TplDelete19 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/trash.png", Color: #d4a4a4)), Hovered: (Background: (TexturePath: "../icons/trash.png", Color: #ffcccc)), Pressed: (Background: (TexturePath: "../icons/trash.png", Color: #b78989)), Disabled: (Background: (TexturePath: "../icons/trash.png", Color: #725959))); Visible: false; }
+      }
+        Label #TplError19 { Anchor: (Width: 540, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ff8080, RenderBold: true, VerticalAlignment: Center, HorizontalAlignment: Center); Text: "Erreur"; Visible: false; }
+      }
+      
+};

@@ -1,0 +1,82 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+$C.@PageOverlay {
+  LayoutMode: Middle;
+
+  $C.@DecoratedContainer {
+    Anchor: (Width: 780, Height: 680);
+
+    #Title {
+      $C.@Title {
+        @Text = "";
+      }
+
+      Label #PageTitle {
+        Style: (...$C.@DefaultLabelStyle, FontSize: 20, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center);
+        Anchor: (Height: 30);
+        Text: "";
+      }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Full: 16);
+
+      Label #Subtitle {
+        Anchor: (Height: 28, Bottom: 8);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #b2c1d0, Wrap: true);
+        Text: "";
+      }
+
+      TextField #SearchInput {
+        Anchor: (Height: 34, Bottom: 8);
+      }
+
+      Label #CountLabel {
+        Anchor: (Height: 22, Bottom: 8);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #cbd9e8);
+        Text: "Players: 0";
+      }
+
+      Label #EmptyLabel {
+        Anchor: (Height: 22, Bottom: 8);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d6a6a6);
+        Text: "No players found.";
+        Visible: false;
+      }
+
+      Group {
+        Anchor: (Height: 500, Bottom: 8);
+        LayoutMode: Top;
+
+        Group #PlayerRow0 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName0 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton0 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow1 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName1 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton1 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow2 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName2 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton2 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow3 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName3 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton3 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow4 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName4 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton4 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow5 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName5 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton5 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow6 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName6 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton6 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow7 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName7 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton7 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow8 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName8 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton8 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow9 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName9 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton9 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow10 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName10 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton10 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow11 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName11 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton11 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow12 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName12 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton12 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow13 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName13 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton13 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow14 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName14 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton14 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow15 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName15 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton15 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow16 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName16 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton16 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow17 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName17 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton17 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow18 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName18 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton18 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+        Group #PlayerRow19 { Anchor: (Height: 24, Bottom: 2); LayoutMode: Left; Label #PlayerName19 { Anchor: (Width: 560, Vertical: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff); Text: ""; } $C.@SmallSecondaryTextButton #SelectButton19 { @Anchor = (Width: 100, Height: 24); Text: "Select"; } }
+      }
+
+      $C.@SecondaryTextButton #BackButton {
+        @Sounds = $Sounds.@ButtonsCancel;
+        @Anchor = (Height: 40);
+        Text: "Back";
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@OreGeneratorSection = Group {
+  LayoutMode: Top;
+  Visible: false;
+
+  Group {
+    Anchor: (Horizontal: 0, Height: 1, Top: 10, Bottom: 14);
+    Background: (Color: #3a465c);
+  }
+
+  Group {
+    Anchor: (Horizontal: 0, Bottom: 12);
+    LayoutMode: Left;
+
+    Group {
+      FlexWeight: 1;
+      LayoutMode: Top;
+
+      Label #OreGenSectionTitle {
+        Anchor: (Horizontal: 0, Height: 26, Bottom: 2);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+        Text: "Ore Generator";
+      }
+
+      Label #OreGenSectionDescription {
+        Anchor: (Horizontal: 0, Height: 18);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+        Text: "Configure ore generation when cobblestone is created.";
+      }
+    }
+  }
+
+  Group #OreGenOreChanceRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 4);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Middle;
+      Label #OreGenOreChanceLabel { Anchor: (Horizontal: 0, Height: 22, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "Ore chance"; }
+    }
+
+    Group #OreGenOreChanceFieldBorder { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2);
+      $C.@TextField #OreGenOreChanceField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group #OreGenOreChanceApplyBox { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false;
+      Button #OreGenOreChanceApply { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); }
+    }
+  }
+
+  Group #OreGenRegenDelayRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 4);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Middle;
+      Label #OreGenRegenDelayLabel { Anchor: (Horizontal: 0, Height: 22, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: "Regen delay (ms)"; }
+    }
+
+    Group #OreGenRegenDelayFieldBorder { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2);
+      $C.@TextField #OreGenRegenDelayField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group #OreGenRegenDelayApplyBox { Anchor: (Width: 32, Height: 32); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false;
+      Button #OreGenRegenDelayApply { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); }
+    }
+  }
+
+  Group #OreGenSpawnRubbleRow {
+    Anchor: (Height: 60, Horizontal: 0, Bottom: 8);
+    LayoutMode: Left;
+    Background: (Color: #223149);
+    Padding: (Left: 12, Right: 10);
+
+    Group {
+      Anchor: (Width: 34, Right: 10);
+      LayoutMode: Middle;
+      $C.@CheckBox #OreGenSpawnRubbleToggle {
+        @Anchor = (Width: 22, Height: 22, Vertical: 0);
+        Value: false;
+      }
+    }
+
+    Group {
+      FlexWeight: 1;
+      Anchor: (Vertical: 0);
+      LayoutMode: Middle;
+
+      Label #OreGenSpawnRubbleLabel {
+        Anchor: (Horizontal: 0, Height: 22, Vertical: 0);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true);
+        Text: "Spawn rubble particles on generation";
+      }
+    }
+  }
+
+  Group {
+    Anchor: (Horizontal: 0, Bottom: 4);
+    LayoutMode: Top;
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 1, Top: 14, Bottom: 10);
+      Background: (Color: #3a465c);
+    }
+
+    Label #OreGenOresSectionTitle {
+      Anchor: (Horizontal: 0, Height: 26, Bottom: 4);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+      Text: "Configured ores";
+    }
+  }
+
+  Group #OreGenCreateRow {
+    Anchor: (Height: 52, Horizontal: 0, Bottom: 6);
+    LayoutMode: Left;
+    Background: (Color: #1a2738);
+    Padding: (Left: 10, Right: 10);
+
+    Group { 
+        FlexWeight: 3; 
+        Anchor: (Height: 32, Right: 8);
+      Padding: (Full: 2);
+      $C.@TextField #OreGenCreateBlockIdField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group { 
+        FlexWeight: 2;
+        Anchor: (Height: 32, Right: 8); 
+        Padding: (Full: 2);
+      $C.@TextField #OreGenCreateWeightField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    TextButton #OreGenCreateButton {
+      Anchor: (Width: 112, Height: 32);
+      Text: "Create";
+      Style: (
+        Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Sounds: $Sounds.@ButtonsLight
+      );
+    }
+  }
+
+  Group #OreGenSearchRow {
+    Anchor: (Height: 52, Horizontal: 0, Bottom: 6);
+    LayoutMode: Left;
+    Background: (Color: #1a2738);
+    Padding: (Left: 10, Right: 10);
+
+    Group { FlexWeight: 1; Anchor: (Height: 32, Right: 8);
+      $C.@TextField #OreGenSearchField { @Anchor = (Horizontal: 0, Height: 32, Vertical: 0); }
+    }
+
+    TextButton #OreGenSearchButton {
+      Anchor: (Width: 112, Height: 32);
+      Text: "Search";
+      Style: (
+        Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Sounds: $Sounds.@ButtonsLight
+      );
+    }
+  }
+
+  Label #OreGenSectionError {
+    Anchor: (Horizontal: 0, Height: 24, Top: 8);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ff5555, HorizontalAlignment: Center);
+    Text: "";
+    Visible: false;
+  }
+
+  Group #OreGenRow0 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder0 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder0 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox0 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete0 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow1 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder1 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder1 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox1 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete1 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow2 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder2 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder2 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox2 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete2 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow3 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder3 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder3 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox3 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete3 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow4 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder4 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder4 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox4 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete4 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow5 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder5 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField5 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder5 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField5 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox5 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply5 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete5 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow6 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder6 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField6 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder6 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField6 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox6 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply6 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete6 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow7 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder7 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField7 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder7 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField7 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox7 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply7 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete7 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow8 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder8 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField8 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder8 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField8 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox8 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply8 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete8 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenRow9 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenBlockIdFieldBorder9 { FlexWeight: 1; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenBlockIdField9 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenWeightFieldBorder9 { Anchor: (Width: 122, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenWeightField9 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenOreApplyBox9 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenOreApply9 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenOreDelete9 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+
+  Group {
+    Anchor: (Horizontal: 0, Bottom: 4);
+    LayoutMode: Top;
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 1, Top: 14, Bottom: 10);
+      Background: (Color: #3a465c);
+    }
+
+    Label #OreGenTiersSectionTitle {
+      Anchor: (Horizontal: 0, Height: 26, Bottom: 2);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+      Text: "Generator tiers";
+    }
+
+    Label #OreGenTiersSectionDescription {
+      Anchor: (Horizontal: 0, Height: 18);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+      Text: "Configure permission-based tiers.";
+    }
+  }
+
+  Group #OreGenTierCreateRow {
+    Anchor: (Height: 52, Horizontal: 0, Bottom: 6);
+    LayoutMode: Left;
+    Background: (Color: #1a2738);
+    Padding: (Left: 10, Right: 10);
+
+    Group {
+      FlexWeight: 2;
+      Anchor: (Height: 32, Right: 8);
+      Padding: (Full: 2);
+      $C.@TextField #OreGenTierCreateNameField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    Group {
+      FlexWeight: 3;
+      Anchor: (Height: 32, Right: 8);
+      Padding: (Left: 8, Right: 8);
+      Background: (Color: #142034);
+      LayoutMode: Middle;
+      Label #OreGenTierCreatePermText {
+        Anchor: (Horizontal: 0, Height: 20, Vertical: 0);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center);
+        Text: "";
+      }
+    }
+
+    Group {
+      FlexWeight: 1;
+      Anchor: (Height: 32, Right: 8);
+      Padding: (Full: 2);
+      $C.@TextField #OreGenTierCreateChanceField { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); }
+    }
+
+    TextButton #OreGenTierCreateButton {
+      Anchor: (Width: 112, Height: 32);
+      Text: "Create";
+      Style: (
+        Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)),
+        Sounds: $Sounds.@ButtonsLight
+      );
+    }
+  }
+
+  Label #OreGenTierSectionError {
+    Anchor: (Horizontal: 0, Height: 24, Top: 8);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ff5555, HorizontalAlignment: Center);
+    Text: "";
+    Visible: false;
+  }
+
+  Group #OreGenTierRow0 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenTierNameFieldBorder0 { FlexWeight: 2; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierNameField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierPermFieldBorder0 { FlexWeight: 3; Anchor: (Height: 32, Right: 8); Padding: (Left: 8, Right: 8); Background: (Color: #142034); LayoutMode: Middle; Label #OreGenTierPermText0 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center); Text: ""; } } Group #OreGenTierChanceFieldBorder0 { Anchor: (Width: 90, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierChanceField0 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierApplyBox0 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenTierApply0 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenTierDelete0 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenTierRow1 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenTierNameFieldBorder1 { FlexWeight: 2; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierNameField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierPermFieldBorder1 { FlexWeight: 3; Anchor: (Height: 32, Right: 8); Padding: (Left: 8, Right: 8); Background: (Color: #142034); LayoutMode: Middle; Label #OreGenTierPermText1 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center); Text: ""; } } Group #OreGenTierChanceFieldBorder1 { Anchor: (Width: 90, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierChanceField1 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierApplyBox1 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenTierApply1 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenTierDelete1 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenTierRow2 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenTierNameFieldBorder2 { FlexWeight: 2; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierNameField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierPermFieldBorder2 { FlexWeight: 3; Anchor: (Height: 32, Right: 8); Padding: (Left: 8, Right: 8); Background: (Color: #142034); LayoutMode: Middle; Label #OreGenTierPermText2 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center); Text: ""; } } Group #OreGenTierChanceFieldBorder2 { Anchor: (Width: 90, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierChanceField2 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierApplyBox2 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenTierApply2 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenTierDelete2 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenTierRow3 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenTierNameFieldBorder3 { FlexWeight: 2; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierNameField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierPermFieldBorder3 { FlexWeight: 3; Anchor: (Height: 32, Right: 8); Padding: (Left: 8, Right: 8); Background: (Color: #142034); LayoutMode: Middle; Label #OreGenTierPermText3 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center); Text: ""; } } Group #OreGenTierChanceFieldBorder3 { Anchor: (Width: 90, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierChanceField3 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierApplyBox3 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenTierApply3 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenTierDelete3 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+  Group #OreGenTierRow4 { Anchor: (Height: 52, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Group #OreGenTierNameFieldBorder4 { FlexWeight: 2; Anchor: (Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierNameField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierPermFieldBorder4 { FlexWeight: 3; Anchor: (Height: 32, Right: 8); Padding: (Left: 8, Right: 8); Background: (Color: #142034); LayoutMode: Middle; Label #OreGenTierPermText4 { Anchor: (Horizontal: 0, Height: 20, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9bb4ce, VerticalAlignment: Center); Text: ""; } } Group #OreGenTierChanceFieldBorder4 { Anchor: (Width: 90, Height: 32, Right: 8); Padding: (Full: 2); $C.@TextField #OreGenTierChanceField4 { @Anchor = (Horizontal: 0, Height: 28, Vertical: 0); } } Group #OreGenTierApplyBox4 { Anchor: (Width: 32, Height: 32, Right: 8); Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12); Visible: false; Button #OreGenTierApply4 { Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0); Style: (Default: (Background: (TexturePath: "../icons/check.png", Color: #9bb4ce)), Hovered: (Background: (TexturePath: "../icons/check.png", Color: #ffffff)), Pressed: (Background: (TexturePath: "../icons/check.png", Color: #7f9cb9)), Disabled: (Background: (TexturePath: "../icons/check.png", Color: #5a6d80))); } } TextButton #OreGenTierDelete4 { Anchor: (Width: 88, Height: 32); Text: "Delete"; Style: (Default: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #9bb4ce, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Hovered: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Pressed: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #7f9cb9, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Disabled: (Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #5a6d80, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center)), Sounds: $Sounds.@ButtonsLight); } }
+
+};

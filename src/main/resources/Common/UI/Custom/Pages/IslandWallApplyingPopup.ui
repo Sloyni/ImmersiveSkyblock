@@ -1,0 +1,30 @@
+$C = "../Common.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 420, Height: 210);
+
+  #Title {
+    $C.@Title #WallApplyingTitle { @Text = "APPLYING WALLS"; }
+  }
+
+  #Content {
+    LayoutMode: Top;
+    Padding: (Top: 20, Bottom: 20, Left: 22, Right: 22);
+
+    Label #WallApplyingMessage {
+      Anchor: (Horizontal: 0, Height: 50);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #d0dce6, HorizontalAlignment: Center, VerticalAlignment: Center, Wrap: true);
+      Text: "Applying wall changes...";
+    }
+
+    Group { FlexWeight: 1; }
+
+    Label #WallApplyingHint {
+      Anchor: (Horizontal: 0, Height: 20);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, HorizontalAlignment: Center);
+      Text: "The island menu will return automatically.";
+    }
+  }
+}

@@ -1,0 +1,150 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@AddonsSection = Group {
+        LayoutMode: Top;
+        Visible: false;
+
+        Group {
+          Anchor: (Horizontal: 0, Height: 1, Top: 10, Bottom: 14);
+          Background: (Color: #3a465c);
+        }
+
+        Group {
+          Anchor: (Horizontal: 0, Bottom: 12);
+          LayoutMode: Left;
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Top;
+
+            Label #AddonsSectionTitle {
+              Anchor: (Horizontal: 0, Height: 26, Bottom: 2);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+              Text: "Addons disponibles";
+            }
+
+            Label #AddonsSectionDescription {
+              Anchor: (Horizontal: 0, Height: 18);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+              Text: "Activez ou desactivez les addons du plugin.";
+            }
+          }
+
+          Group {
+            Anchor: (Width: 32, Height: 32, Top: 2);
+          }
+        }
+
+      Group #AddonRow0 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled0 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName0 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId0 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow1 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled1 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName1 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId1 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow2 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled2 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName2 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId2 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow3 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled3 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName3 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId3 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow4 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled4 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName4 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId4 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow5 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled5 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName5 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId5 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow6 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled6 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName6 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId6 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow7 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled7 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName7 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId7 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow8 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled8 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName8 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId8 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      Group #AddonRow9 { Anchor: (Height: 60, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 12, Right: 10); Visible: false;
+        Group {
+          Anchor: (Width: 34, Right: 10);
+          LayoutMode: Middle;
+          $C.@CheckBox #AddonEnabled9 { @Anchor = (Width: 22, Height: 22, Vertical: 0); Value: false; Visible: false; }
+        }
+        Group { FlexWeight: 1; Anchor: (Vertical: 0); LayoutMode: Top; Padding: (Top: 8);
+          Label #AddonName9 { Anchor: (Horizontal: 0, Height: 22, Top: 2); Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, VerticalAlignment: Center, RenderBold: true); Text: ""; }
+          Label #AddonSubId9 { Anchor: (Horizontal: 0, Height: 14); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7a8e9e, VerticalAlignment: Center); Text: ""; }
+        }
+      }
+      
+};

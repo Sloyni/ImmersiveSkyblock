@@ -1,0 +1,8984 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    {
+      "x": 7,
+      "y": 12,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 7,
+      "y": 17,
+      "z": 21,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "z": 22,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "z": 23,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "z": 24,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "z": 24,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 7,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 19,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "z": 19,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 20,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 20,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "z": 20,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "z": 21,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 18,
+      "z": 21,
+      "name": "Plant_Bush_Green",
+      "support": 15
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "z": 22,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 17,
+      "z": 23,
+      "name": "Furniture_Human_Ruins_Torch"
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 24,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "z": 24,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "z": 25,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "z": 25,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 8,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "z": 26,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "z": 26,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 18,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 18,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "z": 20,
+      "name": "Furniture_Desert_Torch"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "z": 20,
+      "name": "Furniture_Desert_Torch",
+      "filler": 1024
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "z": 21,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Ornate"
+    },
+    {
+      "x": 9,
+      "y": 20,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "z": 22,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof"
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "z": 23,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof",
+      "rotation": 2
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "z": 24,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "z": 24,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 16,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 17,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 18,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 9,
+      "y": 19,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Ornate"
+    },
+    {
+      "x": 9,
+      "y": 20,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Base",
+      "rotation": 8
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "z": 25,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 9,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 9,
+      "y": 22,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 3
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "z": 26,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "z": 26,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "z": 26,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "z": 26,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "z": 26,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 17,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 18,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 18,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 19,
+      "name": "Plant_Bush_Green",
+      "support": 15
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 10,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "z": 23,
+      "name": "*Furniture_Crude_Chest_Small_State_Definitions_CloseWindow",
+      "components": {
+        "Components": {
+          "ItemContainerBlock": {
+            "ItemContainer": {
+              "Capacity": 18,
+              "Items": {
+                "0": {
+                  "Id": "Tool_Hatchet_Wood",
+                  "Quantity": 1,
+                  "Durability": 150.0,
+                  "MaxDurability": 150.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "1": {
+                  "Id": "Tool_Pickaxe_Wood",
+                  "Quantity": 1,
+                  "Durability": 150.0,
+                  "MaxDurability": 150.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "3": {
+                  "Id": "Armor_Cloth_Wool_Chest",
+                  "Quantity": 1,
+                  "Durability": 120.0,
+                  "MaxDurability": 120.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "2": {
+                  "Id": "Weapon_Axe_Crude",
+                  "Quantity": 1,
+                  "Durability": 0.0,
+                  "MaxDurability": 0.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "17": {
+                  "Id": "Deco_Bucket",
+                  "Quantity": 1,
+                  "Durability": 0.0,
+                  "MaxDurability": 0.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "8": {
+                  "Id": "*Tool_Watering_Can_State_Filled_Water",
+                  "Quantity": 1,
+                  "Durability": 36.0,
+                  "MaxDurability": 50.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "9": {
+                  "Id": "Tool_Trap_Bait",
+                  "Quantity": 9,
+                  "Durability": 0.0,
+                  "MaxDurability": 0.0,
+                  "OverrideDroppedItemAnimation": false
+                },
+                "10": {
+                  "Id": "Food_Bread",
+                  "Quantity": 8,
+                  "Durability": 0.0,
+                  "MaxDurability": 0.0,
+                  "OverrideDroppedItemAnimation": false
+                }
+              }
+            },
+            "Capacity": 18
+          }
+        }
+      },
+      "rotation": 2
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 24,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 16,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 17,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 10,
+      "y": 18,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof",
+      "rotation": 1
+    },
+    {
+      "x": 10,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 25,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 10,
+      "y": 22,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 1,
+      "rotation": 3
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "z": 26,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "z": 26,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "z": 26,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "z": 26,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "z": 26,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "z": 26,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "z": 26,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "z": 26,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 16,
+      "name": "Plant_Bush_Green",
+      "support": 15
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 17,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 17,
+      "name": "Plant_Crop_Wild_Grass_Block",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -126.9554443359375,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 18,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 18,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "z": 20,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "z": 21,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "z": 21,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 11,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "z": 22,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "z": 22,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 11,
+      "y": 18,
+      "z": 23,
+      "name": "Furniture_Temple_Light_Stool",
+      "rotation": 2
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 17,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 11,
+      "y": 18,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof",
+      "rotation": 3
+    },
+    {
+      "x": 11,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Middle",
+      "rotation": 6
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "z": 25,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 16,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 22,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "z": 26,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "z": 26,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "z": 26,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "z": 26,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 15,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 16,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 16,
+      "name": "Plant_Crop_Carrot_Block_Eternal",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -87.57047271728516,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 17,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 17,
+      "name": "Plant_Crop_Wild_Grass_Block",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -343.6645202636719,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 18,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 18,
+      "name": "Plant_Crop_Wild_Grass_Block",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -268.0151062011719,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 20,
+      "name": "Furniture_Desert_Torch"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "z": 20,
+      "name": "Furniture_Desert_Torch",
+      "filler": 1024
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Ornate"
+    },
+    {
+      "x": 12,
+      "y": 20,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof"
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof",
+      "rotation": 2
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 16,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 12,
+      "y": 17,
+      "z": 24,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 12,
+      "y": 18,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 12,
+      "y": 19,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Ornate"
+    },
+    {
+      "x": 12,
+      "y": 20,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Pillar_Base"
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Decorative"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "z": 25,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 12,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick"
+    },
+    {
+      "x": 12,
+      "y": 22,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "z": 26,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 15,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 15,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 15,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 15,
+      "name": "Plant_Crop_Carrot_Block_Eternal",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -87.57047271728516,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 16,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 18,
+      "z": 16,
+      "name": "Plant_Crop_Carrot_Block_Eternal",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -87.57047271728516,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 17,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 18,
+      "z": 17,
+      "name": "Plant_Crop_Wild_Grass_Block",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -320.52105712890625,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 18,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 18,
+      "z": 18,
+      "name": "Plant_Crop_Wild_Grass_Block",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -739.7442626953125,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 19,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 21,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 18,
+      "z": 21,
+      "name": "Plant_Bush_Jungle",
+      "support": 15
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 22,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 22,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 22,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 13,
+      "y": 17,
+      "z": 23,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 22,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 16,
+      "z": 24,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 22,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "z": 25,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "z": 25,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "z": 25,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 13,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "filler": 31,
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 14,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 14,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "z": 15,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 15,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 15,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 15,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 16,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 16,
+      "name": "*Soil_Dirt_Tilled_State_Definitions_Watered",
+      "components": {
+        "Components": {
+          "TilledSoil": {
+            "Version": 1,
+            "Planted": true,
+            "WateredUntil": "0001-01-06T12:02:41.093417517Z"
+          }
+        }
+      }
+    },
+    {
+      "x": 14,
+      "y": 18,
+      "z": 16,
+      "name": "Plant_Crop_Carrot_Block_Eternal",
+      "components": {
+        "Components": {
+          "FarmingBlock": {
+            "GrowthProgress": -87.57047271728516,
+            "LastTickGameTime": "0001-01-01T05:52:45.949820999Z"
+          },
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": {
+                "base64": "17s6JkhfRWqT/Au30Z+Sww==",
+                "subType": "04"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 17,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 17,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 17,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 17,
+      "name": "Empty"
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 18,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 18,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 18,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 19,
+      "name": "Rock_Bedrock"
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 20,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 21,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 21,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 22,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 22,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "z": 23,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 23,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 23,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 23,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "z": 24,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "z": 24,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 14,
+      "y": 16,
+      "z": 24,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 14,
+      "y": 17,
+      "z": 24,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 24,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 14,
+      "y": 21,
+      "z": 25,
+      "name": "Rock_Marble_Brick_Roof_Shallow",
+      "rotation": 1
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 13,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 13,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 13,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 2
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 14,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 14,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 14,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 14,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 15,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 15,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 16,
+      "name": "Empty"
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 17,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 17,
+      "name": "Empty"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 17,
+      "name": "Empty"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 18,
+      "name": "Empty"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 18,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 19,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 19,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 21,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 15,
+      "y": 18,
+      "z": 21,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 22,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 23,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 23,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 23,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 1
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "z": 24,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "z": 24,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 13,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 13,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 13,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 13,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 13,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "z": 14,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 14,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 14,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 14,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 14,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 16,
+      "y": 8,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 15,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 16,
+      "y": 7,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 8,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 16,
+      "name": "Empty"
+    },
+    {
+      "x": 16,
+      "y": 8,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "z": 17,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 17,
+      "name": "Empty"
+    },
+    {
+      "x": 16,
+      "y": 9,
+      "z": 18,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 18,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "z": 18,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 16,
+      "y": 10,
+      "z": 19,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 20,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "z": 20,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 21,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 21,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 21,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 21,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 21,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 16,
+      "y": 11,
+      "z": 22,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 16,
+      "y": 12,
+      "z": 22,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 16,
+      "y": 13,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 22,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 22,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 16,
+      "y": 17,
+      "z": 22,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 16,
+      "y": 14,
+      "z": 23,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 16,
+      "y": 15,
+      "z": 23,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 23,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 13,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 13,
+      "name": "Plant_Bush_Green",
+      "support": 15
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "z": 14,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 14,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 14,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 14,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 14,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 15,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 15,
+      "name": "Empty"
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 15,
+      "name": "Empty"
+    },
+    {
+      "x": 17,
+      "y": 3,
+      "z": 16,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 17,
+      "y": 4,
+      "z": 16,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 17,
+      "y": 5,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 6,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 16,
+      "name": "Empty"
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "z": 16,
+      "name": "Empty"
+    },
+    {
+      "x": 17,
+      "y": 7,
+      "z": 17,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 8,
+      "z": 17,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "z": 17,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 17,
+      "y": 9,
+      "z": 18,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 18,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 18,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "z": 18,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 1
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 19,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 19,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 19,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 19,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 19,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 17,
+      "y": 10,
+      "z": 20,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "z": 20,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 17,
+      "y": 12,
+      "z": 20,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 17,
+      "y": 13,
+      "z": 20,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "z": 14,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "z": 14,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "z": 14,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "z": 15,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "z": 15,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "z": 15,
+      "name": "Soil_Sand_White"
+    },
+    {
+      "x": 18,
+      "y": 8,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "z": 16,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "z": 16,
+      "name": "Soil_Sand"
+    },
+    {
+      "x": 18,
+      "y": 9,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "z": 17,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "z": 17,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 15,
+      "z": 17,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 16,
+      "z": 17,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 18,
+      "y": 11,
+      "z": 18,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 18,
+      "y": 12,
+      "z": 18,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 18,
+      "y": 13,
+      "z": 18,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 18,
+      "y": 14,
+      "z": 18,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 19,
+      "y": 15,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "z": 4,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "z": 4,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 19,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 19,
+      "y": 15,
+      "z": 5,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "z": 5,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 19,
+      "y": 15,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "z": 6,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "z": 6,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 19,
+      "y": 18,
+      "z": 6,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 19,
+      "y": 28,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    },
+    {
+      "x": 19,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 19,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 19,
+      "y": 18,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "z": 15,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "z": 15,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "z": 15,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "z": 15,
+      "name": "Furniture_Human_Ruins_Torch",
+      "rotation": 1
+    },
+    {
+      "x": 19,
+      "y": 8,
+      "z": 16,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 19,
+      "y": 9,
+      "z": 16,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 19,
+      "y": 10,
+      "z": 16,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 19,
+      "y": 11,
+      "z": 16,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "z": 16,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "z": 16,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 19,
+      "y": 14,
+      "z": 16,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 19,
+      "y": 12,
+      "z": 17,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 19,
+      "y": 13,
+      "z": 17,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 16,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "z": 4,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "z": 4,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 20,
+      "y": 12,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 13,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 16,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 20,
+      "y": 19,
+      "z": 5,
+      "name": "Plant_Grass_Sharp_Tall"
+    },
+    {
+      "x": 20,
+      "y": 20,
+      "z": 5,
+      "name": "Plant_Grass_Sharp_Tall",
+      "filler": 1024
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 20,
+      "y": 10,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 11,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 20,
+      "y": 12,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 13,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 14,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 16,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 20,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 20,
+      "y": 20,
+      "z": 6,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 20,
+      "y": 29,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 20,
+      "y": 14,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 20,
+      "y": 19,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 20,
+      "y": 26,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 20,
+      "y": 27,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 20,
+      "y": 28,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 20,
+      "y": 31,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 20,
+      "y": 15,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 20,
+      "y": 16,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 20,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 20,
+      "y": 18,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 20,
+      "y": 27,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 20,
+      "y": 30,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 3,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "z": 4,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "z": 4,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "z": 4,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "z": 4,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 21,
+      "y": 21,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 21,
+      "y": 22,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 21,
+      "y": 10,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "z": 5,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "z": 5,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "z": 5,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 21,
+      "y": 21,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 23,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 21,
+      "y": 6,
+      "z": 6,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 21,
+      "y": 7,
+      "z": 6,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 21,
+      "y": 8,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 9,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 10,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "z": 6,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 21,
+      "y": 21,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 21,
+      "y": 27,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 29,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 11,
+      "z": 7,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "z": 7,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "z": 7,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "z": 7,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 21,
+      "y": 20,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 21,
+      "y": 26,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 27,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Corner",
+      "support": 1,
+      "rotation": 3
+    },
+    {
+      "x": 21,
+      "y": 28,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 29,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Corner",
+      "support": 1,
+      "rotation": 3
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 2
+    },
+    {
+      "x": 21,
+      "y": 31,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 12,
+      "z": 8,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 21,
+      "y": 13,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 14,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 21,
+      "y": 15,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 21,
+      "y": 18,
+      "z": 8,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 21,
+      "y": 27,
+      "z": 8,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 30,
+      "z": 8,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 21,
+      "y": 16,
+      "z": 9,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 21,
+      "y": 17,
+      "z": 9,
+      "name": "Plant_Bush_Lush",
+      "support": 15
+    },
+    {
+      "x": 21,
+      "y": 27,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 3,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 3,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 3,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 3,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 22,
+      "y": 29,
+      "z": 3,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "z": 4,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "z": 4,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 4,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 4,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 22,
+      "y": 20,
+      "z": 4,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 22,
+      "y": 21,
+      "z": 4,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 22,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 26,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 28,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 29,
+      "z": 4,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 12,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 5,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 22,
+      "y": 20,
+      "z": 5,
+      "name": "Wood_Oak_Branch_Long"
+    },
+    {
+      "x": 22,
+      "y": 21,
+      "z": 5,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 22,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 23,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 24,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 22,
+      "y": 26,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 28,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 29,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 10,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 22,
+      "y": 11,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 12,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 22,
+      "y": 20,
+      "z": 6,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 22,
+      "y": 21,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 22,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 23,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 22,
+      "y": 30,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 31,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 13,
+      "z": 7,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "z": 7,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 20,
+      "z": 7,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 22,
+      "y": 21,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 22,
+      "y": 25,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 5
+    },
+    {
+      "x": 22,
+      "y": 27,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 5
+    },
+    {
+      "x": 22,
+      "y": 29,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 5
+    },
+    {
+      "x": 22,
+      "y": 31,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 32,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 14,
+      "z": 8,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 8,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 22,
+      "y": 20,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 22,
+      "y": 30,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 22,
+      "y": 32,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 22,
+      "y": 15,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "z": 9,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 22,
+      "y": 17,
+      "z": 9,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 22,
+      "y": 19,
+      "z": 9,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 22,
+      "y": 27,
+      "z": 9,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 22,
+      "y": 28,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 3,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 3,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 3,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 3,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 3,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 4,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 4,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 23,
+      "y": 21,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "z": 4,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 4,
+      "name": "Wood_Oak_Branch_Corner",
+      "support": 2,
+      "rotation": 2
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 4,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 13,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 5,
+      "name": "Soil_Pebbles"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 5,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 23,
+      "y": 21,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 22,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 23,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "z": 5,
+      "name": "Wood_Oak_Branch_Corner",
+      "support": 1,
+      "rotation": 2
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 5,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1,
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 31,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 12,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 23,
+      "y": 13,
+      "z": 6,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 6,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 23,
+      "y": 21,
+      "z": 6,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 23,
+      "y": 22,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 23,
+      "y": 24,
+      "z": 6,
+      "name": "Wood_Oak_Branch_Short",
+      "rotation": 2
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "z": 6,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 6,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 31,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 32,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 33,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 23,
+      "y": 13,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 21,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 22,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 23,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 24,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 25,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 28,
+      "z": 7,
+      "name": "Wood_Oak_Trunk"
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 7,
+      "name": "Wood_Oak_Trunk_Full"
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long"
+    },
+    {
+      "x": 23,
+      "y": 31,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 32,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 33,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 8,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 8,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 23,
+      "y": 21,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 8,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 8,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 8,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 31,
+      "z": 8,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 33,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 23,
+      "y": 34,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 23,
+      "y": 12,
+      "z": 9,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 23,
+      "y": 13,
+      "z": 9,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 23,
+      "y": 14,
+      "z": 9,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 15,
+      "z": 9,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 23,
+      "y": 16,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 9,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 23,
+      "y": 18,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 23,
+      "y": 19,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 23,
+      "y": 20,
+      "z": 9,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 9,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1,
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 28,
+      "z": 9,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 9,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1,
+      "rotation": 4
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 9,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 17,
+      "z": 10,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 23,
+      "y": 26,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 27,
+      "z": 10,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 28,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 10,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 23,
+      "y": 30,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 23,
+      "y": 29,
+      "z": 11,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 24,
+      "y": 29,
+      "z": 3,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 4,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 4,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 4,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "z": 4,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 24,
+      "y": 26,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 24,
+      "y": 29,
+      "z": 4,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 14,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 5,
+      "name": "Soil_Pebbles"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "z": 5,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "z": 5,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 24,
+      "y": 26,
+      "z": 5,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 31,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 24,
+      "y": 13,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 14,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Gravel",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "z": 6,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 24,
+      "y": 21,
+      "z": 6,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 24,
+      "y": 30,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 24,
+      "y": 32,
+      "z": 6,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 24,
+      "y": 14,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Gravel",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "z": 7,
+      "name": "Soil_Gravel",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 20,
+      "z": 7,
+      "name": "Soil_Gravel",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 26,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 5
+    },
+    {
+      "x": 24,
+      "y": 28,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "rotation": 5
+    },
+    {
+      "x": 24,
+      "y": 30,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 31,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 32,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 33,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 34,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 35,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 14,
+      "z": 8,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 8,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 8,
+      "name": "Empty"
+    },
+    {
+      "x": 24,
+      "y": 31,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 32,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 33,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 34,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 24,
+      "y": 26,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 24,
+      "y": 27,
+      "z": 9,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 29,
+      "z": 9,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 24,
+      "y": 15,
+      "z": 10,
+      "name": "Rock_Stone_Beam"
+    },
+    {
+      "x": 24,
+      "y": 16,
+      "z": 10,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 24,
+      "y": 17,
+      "z": 10,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 10,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 24,
+      "y": 19,
+      "z": 10,
+      "name": "Rubble_Stone"
+    },
+    {
+      "x": 24,
+      "y": 27,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 4,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 4,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 25,
+      "y": 29,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 25,
+      "y": 30,
+      "z": 4,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "z": 5,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 5,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 5,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 25,
+      "y": 20,
+      "z": 5,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 25,
+      "y": 27,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 25,
+      "y": 28,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 25,
+      "y": 15,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "z": 6,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 25,
+      "y": 20,
+      "z": 6,
+      "name": "Soil_Grass_Deep"
+    },
+    {
+      "x": 25,
+      "y": 21,
+      "z": 6,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 25,
+      "y": 28,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 29,
+      "z": 6,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 14,
+      "z": 7,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 25,
+      "y": 15,
+      "z": 7,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "z": 7,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 20,
+      "z": 7,
+      "name": "Rubble_Stone"
+    },
+    {
+      "x": 25,
+      "y": 25,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 26,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 1,
+      "rotation": 5
+    },
+    {
+      "x": 25,
+      "y": 27,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 28,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Corner",
+      "support": 1,
+      "rotation": 1
+    },
+    {
+      "x": 25,
+      "y": 29,
+      "z": 7,
+      "name": "Wood_Oak_Branch_Long",
+      "support": 2
+    },
+    {
+      "x": 25,
+      "y": 30,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 33,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 25,
+      "y": 15,
+      "z": 8,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 20,
+      "z": 8,
+      "name": "Rubble_Stone"
+    },
+    {
+      "x": 25,
+      "y": 26,
+      "z": 8,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 25,
+      "y": 33,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 15
+    },
+    {
+      "x": 25,
+      "y": 15,
+      "z": 9,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 25,
+      "y": 16,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 18,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 25,
+      "y": 19,
+      "z": 9,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 25,
+      "y": 28,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 25,
+      "y": 29,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 25,
+      "y": 30,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 25,
+      "y": 17,
+      "z": 10,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 25,
+      "y": 29,
+      "z": 10,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "z": 5,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 26,
+      "y": 19,
+      "z": 5,
+      "name": "Plant_Bush_Hanging",
+      "support": 15
+    },
+    {
+      "x": 26,
+      "y": 26,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 4
+    },
+    {
+      "x": 26,
+      "y": 27,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    },
+    {
+      "x": 26,
+      "y": 28,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 26,
+      "y": 29,
+      "z": 5,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    },
+    {
+      "x": 26,
+      "y": 16,
+      "z": 6,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "z": 6,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "z": 6,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 19,
+      "z": 6,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 20,
+      "z": 6,
+      "name": "Plant_Grass_Sharp"
+    },
+    {
+      "x": 26,
+      "y": 15,
+      "z": 7,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 26,
+      "y": 16,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 19,
+      "z": 7,
+      "name": "Soil_Grass"
+    },
+    {
+      "x": 26,
+      "y": 20,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 26,
+      "y": 26,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 26,
+      "y": 27,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 26,
+      "y": 29,
+      "z": 7,
+      "name": "Plant_Leaves_Oak"
+    },
+    {
+      "x": 26,
+      "y": 15,
+      "z": 8,
+      "name": "Rock_Stone_Mossy"
+    },
+    {
+      "x": 26,
+      "y": 16,
+      "z": 8,
+      "name": "Rock_Stone"
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "z": 8,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 19,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 26,
+      "y": 28,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 4
+    },
+    {
+      "x": 26,
+      "y": 16,
+      "z": 9,
+      "name": "Rock_Calcite"
+    },
+    {
+      "x": 26,
+      "y": 17,
+      "z": 9,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 26,
+      "y": 18,
+      "z": 9,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 26,
+      "y": 28,
+      "z": 9,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    },
+    {
+      "x": 27,
+      "y": 17,
+      "z": 7,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 27,
+      "y": 18,
+      "z": 7,
+      "name": "Soil_Gravel"
+    },
+    {
+      "x": 27,
+      "y": 19,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 27,
+      "y": 28,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 2
+    },
+    {
+      "x": 27,
+      "y": 29,
+      "z": 7,
+      "name": "Plant_Leaves_Oak",
+      "support": 1
+    },
+    {
+      "x": 27,
+      "y": 16,
+      "z": 8,
+      "name": "Soil_Dirt"
+    },
+    {
+      "x": 27,
+      "y": 17,
+      "z": 8,
+      "name": "Soil_Grass_Sunny"
+    },
+    {
+      "x": 27,
+      "y": 18,
+      "z": 8,
+      "name": "Plant_Grass_Sharp_Short"
+    },
+    {
+      "x": 27,
+      "y": 28,
+      "z": 8,
+      "name": "Plant_Leaves_Oak",
+      "support": 3
+    }
+  ],
+  "fluids": [
+    {
+      "x": 14,
+      "y": 17,
+      "z": 17,
+      "name": "Water_Source",
+      "level": 1
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 16,
+      "name": "Water",
+      "level": 7
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 17,
+      "name": "Water",
+      "level": 8
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "z": 17,
+      "name": "Water",
+      "level": 7
+    },
+    {
+      "x": 15,
+      "y": 16,
+      "z": 18,
+      "name": "Water",
+      "level": 7
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 16,
+      "name": "Water",
+      "level": 6
+    },
+    {
+      "x": 16,
+      "y": 16,
+      "z": 17,
+      "name": "Water",
+      "level": 7
+    },
+    {
+      "x": 17,
+      "y": 14,
+      "z": 15,
+      "name": "Water",
+      "level": 8
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 15,
+      "name": "Water",
+      "level": 7
+    },
+    {
+      "x": 17,
+      "y": 15,
+      "z": 16,
+      "name": "Water",
+      "level": 8
+    },
+    {
+      "x": 17,
+      "y": 16,
+      "z": 16,
+      "name": "Water",
+      "level": 5
+    },
+    {
+      "x": 24,
+      "y": 18,
+      "z": 8,
+      "name": "Lava_Source",
+      "level": 1
+    }
+  ]
+}

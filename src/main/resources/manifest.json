@@ -1,0 +1,22 @@
+{
+    "Group": "Sloyni",
+    "Name": "ISkyblock",
+    "Version": "0.0.3",
+    "Description": "ISkyblock rebuilt from scratch.",
+    "Authors": [
+        {
+            "Name": "Sloyni"
+        }
+    ],
+    "Website": "",
+    "ServerVersion": "*",
+    "Dependencies": {
+        
+    },
+    "OptionalDependencies": {
+        
+    },
+    "DisabledByDefault": false,
+    "IncludesAssetPack": true,
+    "Main": "com.sloyni.main.ISkyblockPlugin"
+}

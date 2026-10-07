@@ -1,0 +1,448 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+$IslandMenuSettingsSection = "IslandMenu.SettingsSection.ui";
+$IslandMenuTeamSection = "IslandMenu.TeamSection.ui";
+$IslandMenuHomesSection = "IslandMenu.HomesSection.ui";
+$IslandMenuWarpsSection = "IslandMenu.WarpsSection.ui";
+$IslandMenuTopSection = "IslandMenu.TopSection.ui";
+
+@IslandTabBase = TabStyleState(
+  Background: "../Common/Tab.png",
+  Overlay: "../Common/TabOverlay.png",
+  IconAnchor: (Width: 44, Height: 44),
+  Anchor: (Width: 82, Height: 62, Right: 5, Bottom: -10)
+);
+@IslandTopTabAnchor = Anchor(Width: 82, Height: 62, Right: 5, Bottom: -10);
+@IslandTopTabsStyle = TabNavigationStyle(
+  TabStyle: (
+    Default: @IslandTabBase,
+    Hovered: (...@IslandTabBase, Anchor: (...@IslandTopTabAnchor, Bottom: -4)),
+    Pressed: (...@IslandTabBase, Anchor: (...@IslandTopTabAnchor, Bottom: -6))
+  ),
+  SelectedTabStyle: (
+    Default: (
+      ...@IslandTabBase,
+      Anchor: (...@IslandTopTabAnchor, Bottom: -1),
+      IconAnchor: (Width: 44, Height: 44),
+      Overlay: "../Common/TabSelectedOverlay.png"
+    )
+  )
+);
+
+$C.@PageOverlay {}
+
+Group #Root {
+  LayoutMode: Left;
+  Anchor: (Width: 1116, Height: 620);
+
+  $C.@DecoratedContainer #LeftContainer {
+    Anchor: (Width: 434, Height: 620);
+
+    #Title {
+      $C.@Title #WindowTitle { @Text = "MY ISLAND"; }
+    }
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Full: 24);
+
+      Group #LangDropdownRow {
+        Anchor: (Height: 28, Horizontal: 0, Bottom: 6);
+        LayoutMode: Left;
+
+        Group { FlexWeight: 1; }
+
+        DropdownBox #LeftLangDropdown {
+          Anchor: (Width: 130, Height: 28);
+          Style: $C.@DefaultDropdownBoxStyle;
+          Value: "";
+        }
+      }
+
+      Group #IslandHero {
+        LayoutMode: Top;
+        Anchor: (Horizontal: 0, Top: 12);
+
+        Group #IslandSizeRow {
+          LayoutMode: Left;
+          Anchor: (Height: 28, Horizontal: 0, Bottom: 10);
+          Padding: (Horizontal: 4);
+
+          Group { FlexWeight: 1; }
+
+          Label #IslandSizeA {
+            Text: "300";
+            Style: (FontSize: 16, TextColor: #ffffff, RenderBold: false, HorizontalAlignment: Center);
+            Anchor: (Height: 22);
+          }
+
+          Label {
+            Text: "x";
+            Style: (FontSize: 16, TextColor: #ffa500, RenderBold: true, HorizontalAlignment: Center);
+            Anchor: (Height: 22, Left: 4, Right: 4);
+          }
+
+          Label #IslandSizeB {
+            Text: "300";
+            Style: (FontSize: 16, TextColor: #ffffff, RenderBold: false, HorizontalAlignment: Center);
+            Anchor: (Height: 22);
+          }
+
+          Label {
+            Text: "blocks";
+            Style: (FontSize: 16, TextColor: #ffa500, RenderBold: true, HorizontalAlignment: Center);
+            Anchor: (Height: 22, Left: 6);
+          }
+
+          Group { FlexWeight: 1; }
+        }
+
+        Group #IslandImageContainer {
+          LayoutMode: Middle;
+          Anchor: (Horizontal: 0, Height: 140, Top: 4);
+
+          Group #IslandImage {
+            Anchor: (Left: 42, Right: 42, Height: 140);
+            LayoutMode: Middle;
+            Background: (TexturePath: "island.png");
+
+            Group #IslandNameRow {
+              LayoutMode: Left;
+              Anchor: (Horizontal: 0, Height: 30, Vertical: 0);
+              Padding: (Horizontal: 10);
+
+              Group { FlexWeight: 1; }
+
+              Label #IslandName {
+                Text: "Player's Island";
+                Style: (FontSize: 18, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, Wrap: false);
+                Anchor: (Height: 24, Vertical: 0);
+              }
+
+              Group { Anchor: (Width: 8); }
+
+              Group #BtnRenameIsland {
+                Anchor: (Width: 34, Height: 34, Vertical: 0);
+                Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+              
+
+                Button #RenameIslandIcon {
+                  Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0);
+                  Style: (
+                    Default: (Background: (TexturePath: "../icons/pen.png", Color: #9bb4ce)),
+                    Hovered: (Background: (TexturePath: "../icons/pen.png", Color: #ffffff)),
+                    Pressed: (Background: (TexturePath: "../icons/pen.png", Color: #7f9cb9)),
+                    Disabled: (Background: (TexturePath: "../icons/pen.png", Color: #5a6d80))
+                  );
+                }
+              }
+
+              Group { FlexWeight: 1; }
+            }
+          }
+        }
+      }
+
+      Group { FlexWeight: 2; }
+
+      Group #TableHeader {
+        Anchor: (Horizontal: 0, Height: 68);
+        LayoutMode: Left;
+        Background: (Color: #21344B);
+        Padding: (Vertical: 10, Horizontal: 10);
+
+        Group {
+          FlexWeight: 1;
+          LayoutMode: Middle;
+          Group { Anchor: (Width: 34, Height: 34); Background: (TexturePath: "star.png"); }
+        }
+
+        Group {
+          FlexWeight: 2;
+          LayoutMode: Top;
+
+          Label #TopRank {
+            Text: "Top #1";
+            Style: (FontSize: 14, TextColor: #7a8d9f, RenderBold: true, HorizontalAlignment: Center);
+            Anchor: (Height: 20, Horizontal: 0);
+          }
+
+          Group {
+            Anchor: (Horizontal: 0, Height: 28);
+            LayoutMode: Left;
+
+            Group { FlexWeight: 1; }
+
+            Label #IslandLevel {
+              Text: "Lvl. 140";
+              Style: (FontSize: 20, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center);
+              Anchor: (Height: 28, Vertical: 0);
+            }
+
+            Group { Anchor: (Width: 4); }
+
+            Group #BtnRefreshLevel {
+              Anchor: (Width: 32, Height: 32, Vertical: 0);
+              Background: (TexturePath: "../Common/Buttons/Secondary.png", Border: 12);
+
+              Button #RefreshLevelIcon {
+                Anchor: (Width: 18, Height: 18, Horizontal: 0, Vertical: 0);
+                Style: (
+                  Default: (Background: (TexturePath: "../icons/reload.png", Color: #9bb4ce)),
+                  Hovered: (Background: (TexturePath: "../icons/reload.png", Color: #ffffff)),
+                  Pressed: (Background: (TexturePath: "../icons/reload.png", Color: #7f9cb9)),
+                  Disabled: (Background: (TexturePath: "../icons/reload.png", Color: #5a6d80))
+                );
+              }
+            }
+
+            Group { FlexWeight: 1; }
+          }
+        }
+
+        Group {
+          FlexWeight: 1;
+          LayoutMode: Middle;
+          Group { Anchor: (Width: 34, Height: 34); Background: (TexturePath: "star.png"); }
+        }
+      }
+
+      Group #StatsGrid {
+        Anchor: (Horizontal: 0);
+        LayoutMode: Top;
+        Background: (TexturePath: "../Common/ContainerPanelPatch.png", Border: 4, Color: #0f1822);
+
+        Group {
+          Anchor: (Height: 48, Horizontal: 0);
+          LayoutMode: Left;
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Middle;
+            Background: (Color: #0f1822);
+            Padding: (Full: 8);
+            Label #LabelMembers { Text: "Members:"; Style: (FontSize: 13, TextColor: #7a8d9f, HorizontalAlignment: Center); Anchor: (Height: 16, Horizontal: 0); }
+            Label #MembersValue { Text: "0"; Style: (FontSize: 15, TextColor: #d0dce6, RenderBold: true, HorizontalAlignment: Center); Anchor: (Height: 20, Horizontal: 0, Top: 2); }
+          }
+
+          Group { Anchor: (Width: 1, Top: 4, Bottom: 4); Background: (Color: #2b3542); }
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Middle;
+            Background: (Color: #0f1822);
+            Padding: (Full: 8);
+            Label #LabelMobsKilled { Text: "Mobs killed:"; Style: (FontSize: 13, TextColor: #7a8d9f, HorizontalAlignment: Center); Anchor: (Height: 16, Horizontal: 0); }
+            Label #MobsKilledValue { Text: "0"; Style: (FontSize: 15, TextColor: #d0dce6, RenderBold: true, HorizontalAlignment: Center); Anchor: (Height: 20, Horizontal: 0, Top: 2); }
+          }
+        }
+
+        Group { Anchor: (Height: 1, Horizontal: 4); Background: (Color: #2b3542); }
+
+        Group {
+          Anchor: (Height: 48, Horizontal: 0);
+          LayoutMode: Left;
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Middle;
+            Background: (Color: #0f1822);
+            Padding: (Full: 8);
+            Label #LabelTimePlayed { Text: "Time played:"; Style: (FontSize: 13, TextColor: #7a8d9f, HorizontalAlignment: Center); Anchor: (Height: 16, Horizontal: 0); }
+            Label #TimePlayedValue { Text: "0h"; Style: (FontSize: 15, TextColor: #d0dce6, RenderBold: true, HorizontalAlignment: Center); Anchor: (Height: 20, Horizontal: 0, Top: 2); }
+          }
+
+          Group { Anchor: (Width: 1, Top: 4, Bottom: 4); Background: (Color: #2b3542); }
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Middle;
+            Background: (Color: #0f1822);
+            Padding: (Full: 8);
+            Label #LabelDeaths { Text: "Deaths:"; Style: (FontSize: 13, TextColor: #7a8d9f, HorizontalAlignment: Center); Anchor: (Height: 16, Horizontal: 0); }
+            Label #DeathsValue { Text: "0"; Style: (FontSize: 15, TextColor: #d0dce6, RenderBold: true, HorizontalAlignment: Center); Anchor: (Height: 20, Horizontal: 0, Top: 2); }
+          }
+        }
+      }
+
+      Group { FlexWeight: 1; }
+
+      Group #BottomButtons {
+        Anchor: (Height: 44, Horizontal: 0);
+        LayoutMode: Left;
+
+        $C.@TextButton #BtnGoToIsland {
+          @Sounds = $Sounds.@ButtonsLight;
+          @Anchor = (Height: 44);
+          FlexWeight: 1;
+          Text: "GO TO ISLAND";
+        }
+
+        Group { Anchor: (Width: 8); }
+
+        $C.@TertiaryTextButton #BtnLock {
+          @Sounds = $Sounds.@ButtonsLight;
+          @Anchor = (Height: 44, Width: 188);
+          Text: "LOCK";
+        }
+      }
+    }
+  }
+
+  Group { Anchor: (Width: 10); }
+
+  Group #RightSide {
+    LayoutMode: Top;
+    Anchor: (Width: 672);
+
+    TabNavigation #TabNav {
+      Anchor: (Height: 66, Left: 2, Right: 0);
+      Style: @IslandTopTabsStyle;
+      SelectedTab: "Settings";
+
+      TabButton #TabSettings {
+        Icon: "gear.png";
+        TooltipText: "Settings";
+        Id: "Settings";
+      }
+
+      TabButton #TabTeam {
+        Icon: "users.png";
+        TooltipText: "Team";
+        Id: "Team";
+      }
+
+      TabButton #TabHomes {
+        Icon: "homes.png";
+        TooltipText: "Homes";
+        Id: "Homes";
+      }
+
+      TabButton #TabWarps {
+        Icon: "warps.png";
+        TooltipText: "Warps";
+        Id: "Warps";
+      }
+
+      TabButton #TabTop {
+        Icon: "top_islands.png";
+        TooltipText: "Top";
+        Id: "Top";
+      }
+    }
+
+    $C.@DecoratedContainer #RightContainer {
+      @CloseButton = true;
+      Anchor: (Width: 672, Height: 554);
+
+      #Title {
+        Group #ContainerDecorationTop {
+          Visible: false;
+        }
+
+        $C.@Title #RightTitle { @Text = "ISLAND ACTIONS"; }
+      }
+
+      #Content {
+        LayoutMode: Top;
+        Padding: (Full: 14);
+
+        Group #ConfirmPanel {
+          Visible: false;
+          Anchor: (Height: 92, Horizontal: 0);
+          LayoutMode: Left;
+          Background: (Color: #4b2618);
+          Padding: (Vertical: 10, Horizontal: 12);
+
+          Group {
+            FlexWeight: 1;
+            LayoutMode: Top;
+
+            Label #ConfirmTitle {
+              Text: "Confirm action";
+              Style: (FontSize: 14, TextColor: #ffd6c8, RenderBold: true, HorizontalAlignment: Start);
+              Anchor: (Height: 18, Horizontal: 0);
+            }
+
+            Label #ConfirmMessage {
+              Text: "Please confirm.";
+              Style: (FontSize: 12, TextColor: #f8e2db, HorizontalAlignment: Start, Wrap: true);
+              Anchor: (Height: 42, Horizontal: 0, Top: 6);
+            }
+          }
+
+          Group { Anchor: (Width: 12); }
+
+          Group {
+            Anchor: (Width: 210);
+            LayoutMode: Top;
+
+            $C.@SmallSecondaryTextButton #BtnConfirmYes {
+              @Anchor = (Width: 210, Height: 34);
+              Text: "Confirm";
+            }
+
+            Group { Anchor: (Height: 6); }
+
+            $C.@SmallSecondaryTextButton #BtnConfirmNo {
+              @Anchor = (Width: 210, Height: 34);
+              Text: "Cancel";
+            }
+          }
+        }
+
+        $IslandMenuSettingsSection.@IslandMenuSettingsSection #PanelSettings {}
+
+        $IslandMenuTeamSection.@IslandMenuTeamSection #PanelTeam {}
+
+        $IslandMenuHomesSection.@IslandMenuHomesSection #PanelHomes {}
+
+        $IslandMenuWarpsSection.@IslandMenuWarpsSection #PanelWarps {}
+
+        $IslandMenuTopSection.@IslandMenuTopSection #PanelTop {}
+
+        Group #SettingsErrorPopup {
+          Visible: false;
+          Anchor: (Horizontal: 0, Vertical: 0);
+          LayoutMode: Middle;
+          Background: (Color: #0b121b);
+
+          Group #SettingsErrorPopupCard {
+            Anchor: (Width: 420, Height: 210);
+            LayoutMode: Top;
+            Background: (TexturePath: "../Common/ContainerPanelPatch.png", Border: 4, Color: #172332);
+            Padding: (Top: 14, Bottom: 14, Left: 16, Right: 16);
+
+            Label #SettingsErrorTitle {
+              Anchor: (Horizontal: 0, Height: 22);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 14, TextColor: #ffd6c8, RenderBold: true, HorizontalAlignment: Center);
+              Text: "Error";
+            }
+
+            Label #SettingsErrorMessage {
+              Anchor: (Horizontal: 0, Height: 72, Top: 10);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #f8e2db, HorizontalAlignment: Center, Wrap: true);
+              Text: "";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Group {
+              Anchor: (Horizontal: 0, Height: 34);
+              LayoutMode: Left;
+
+              Group { FlexWeight: 1; }
+
+              $C.@SmallSecondaryTextButton #BtnSettingsErrorClose {
+                @Anchor = (Width: 160, Height: 32);
+                Text: "Close";
+              }
+
+              Group { FlexWeight: 1; }
+            }
+          }
+        }
+      }
+    }
+  }
+}

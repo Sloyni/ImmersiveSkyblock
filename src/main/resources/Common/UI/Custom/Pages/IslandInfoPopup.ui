@@ -1,0 +1,40 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 440, Height: 230);
+
+  #Title {
+    $C.@Title #InfoPopupTitle { @Text = "INFO"; }
+  }
+
+  #Content {
+    LayoutMode: Top;
+    Padding: (Top: 18, Bottom: 20, Left: 24, Right: 24);
+
+    Label #InfoPopupMessage {
+      Anchor: (Horizontal: 0, Height: 72, Bottom: 12);
+      Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d0dce6, HorizontalAlignment: Center, VerticalAlignment: Center, Wrap: true);
+      Text: "";
+    }
+
+    Group { FlexWeight: 1; }
+
+    Group {
+      Anchor: (Horizontal: 0, Height: 40);
+      LayoutMode: Left;
+
+      Group { FlexWeight: 1; }
+
+      $C.@TextButton #BtnInfoClose {
+        @Sounds = $Sounds.@ButtonsLight;
+        @Anchor = (Width: 160, Height: 36);
+        Text: "OK";
+      }
+
+      Group { FlexWeight: 1; }
+    }
+  }
+}

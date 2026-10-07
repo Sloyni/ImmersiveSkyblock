@@ -1,0 +1,340 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+$CreateTemplateSection = "ISkyblockAdminDashboard.CreateTemplateSection.ui";
+$CreateTemplateForm = "ISkyblockAdminDashboard.CreateTemplateForm.ui";
+$EditTemplateForm = "ISkyblockAdminDashboard.EditTemplateForm.ui";
+$DeleteTemplateConfirm = "ISkyblockAdminDashboard.DeleteTemplateConfirm.ui";
+$TemplatesSection = "ISkyblockAdminDashboard.TemplatesSection.ui";
+$AddonsSection = "ISkyblockAdminDashboard.AddonsSection.ui";
+$SettingsSection = "ISkyblockAdminDashboard.SettingsSection.ui";
+$MobsManagerSection = "ISkyblockAdminDashboard.MobsManagerSection.ui";
+$ResetsSection = "ISkyblockAdminDashboard.ResetsSection.ui";
+$HomesSection = "ISkyblockAdminDashboard.HomesSection.ui";
+$IslandsSection = "ISkyblockAdminDashboard.IslandsSection.ui";
+$LevelsSection = "ISkyblockAdminDashboard.LevelsSection.ui";
+$OreGeneratorSection = "ISkyblockAdminDashboard.OreGeneratorSection.ui";
+
+$C.@PageOverlay {}
+
+$C.@Container {
+  Anchor: (Width: 1050, Height: 700);
+
+  #Title {
+    $C.@Title { @Text = "ISkyblock Admin"; }
+  }
+
+  #Content {
+    LayoutMode: Left;
+    Padding: (Full: 0);
+
+    // === Sidebar ===
+    Group #Sidebar {
+      Anchor: (Width: 250);
+      LayoutMode: Top;
+      Background: (Color: #111b28(0.96));
+      Padding: (Left: 8, Right: 8, Top: 10, Bottom: 10);
+
+      TextButton #SidebarNavTemplates {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Templates";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavTemplatesActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Templates";
+        Visible: true;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavAddons {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Addons";
+        Visible: true;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavAddonsActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Addons";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavSettings {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Settings";
+        Visible: true;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavSettingsActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Settings";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavMobsManager {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Mobs manager";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavMobsManagerActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Mobs manager";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavResets {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Resets";
+        Visible: true;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavResetsActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Resets";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavHomes {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Homes";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavHomesActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Homes";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavIslands {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Islands";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavIslandsActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Islands";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavLevels {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Levels";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavLevelsActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Levels";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavOreGenerator {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Ore Generator";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #8fa4bc, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #1a2738), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #c7d9ea, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #00000000), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #56687d, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      TextButton #SidebarNavOreGeneratorActive {
+        Anchor: (Horizontal: 0, Height: 34, Bottom: 0);
+        Padding: (Left: 12, Right: 12);
+        Text: "Ore Generator";
+        Visible: false;
+        Style: (
+          Default: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Hovered: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Pressed: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Disabled: (Background: (Color: #223149), LabelStyle: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #ffffff, RenderUppercase: true, RenderBold: true, HorizontalAlignment: Start, VerticalAlignment: Center)),
+          Sounds: $Sounds.@ButtonsLight
+        );
+      }
+
+      Group {
+        FlexWeight: 1;
+      }
+
+      $C.@CancelTextButton #CloseButton {
+        @Sounds = $Sounds.@ButtonsCancel;
+        @Anchor = (Horizontal: 0, Height: 36, Top: 10);
+        Text: "Fermer";
+      }
+    }
+
+    // === Main content ===
+    Group {
+      FlexWeight: 1;
+      LayoutMode: TopScrolling;
+      Padding: (Left: 18, Right: 18, Top: 14, Bottom: 14);
+      ScrollbarStyle: $C.@DefaultScrollbarStyle;
+
+      $CreateTemplateSection.@CreateTemplateSection #CreateSection {}
+
+      $CreateTemplateForm.@CreateTemplateFormSection #CreateTemplateForm {}
+
+      $EditTemplateForm.@EditTemplateFormSection #EditTemplateForm {}
+
+      $DeleteTemplateConfirm.@DeleteTemplateConfirmSection #DeleteTemplateConfirmForm {}
+
+      $TemplatesSection.@TemplatesSection #TemplatesSection {}
+
+      $AddonsSection.@AddonsSection #AddonsSection {}
+
+      $SettingsSection.@SettingsSection #SettingsSection {}
+
+      $MobsManagerSection.@MobsManagerSection #MobsManagerSection {}
+
+      $ResetsSection.@ResetsSection #ResetsSection {}
+
+      $HomesSection.@HomesSection #HomesSection {}
+
+      $IslandsSection.@IslandsSection #IslandsSection {}
+
+      $LevelsSection.@LevelsSection #LevelsSection {}
+
+      $OreGeneratorSection.@OreGeneratorSection #OreGeneratorSection {}
+    }
+  }
+}
+
+
+
+
+
+

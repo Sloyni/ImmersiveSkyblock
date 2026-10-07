@@ -1,0 +1,80 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+$C.@PageOverlay {
+  LayoutMode: Middle;
+
+  // Preview image: placed outside (above) the card and forced to a square
+  Group {
+    LayoutMode: Top;
+    Anchor: (Horizontal: 0);
+    Group #Preview {
+      Anchor: (Width: 400, Height: 400, Top: 0, Bottom: 28);
+      Background: (Color: #00000000);
+    }
+  }
+
+  $C.@DecoratedContainer {
+    Anchor: (Width: 720);
+
+    #Content {
+      LayoutMode: Top;
+      Padding: (Full: 18, Top: 28);
+
+      Label #TemplateTitle {
+        Anchor: (Height: 28, Top: 6);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, HorizontalAlignment: Center);
+        Text: "";
+      }
+
+      Label #TemplateDescription {
+        Anchor: (Height: 44, Top: 12);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #b8b8b8, HorizontalAlignment: Center, Wrap: true);
+        Text: "";
+      }
+
+      Group {
+        LayoutMode: Center;
+        Anchor: (Top: 2);
+
+        Label #Counter {
+          Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #b8b8b8, HorizontalAlignment: Center);
+          Anchor: (Width: 60);
+          Text: "";
+        }
+      }
+
+      Group {
+        LayoutMode: Center;
+        Anchor: (Top: 6);
+
+        $C.@TextButton #SelectButton {
+          @Sounds = $Sounds.@ButtonsLight;
+          @Anchor = (Width: 180, Right: 8);
+          Text: "";
+        }
+
+        $C.@SecondaryTextButton #CancelButton {
+          @Sounds = $Sounds.@ButtonsCancel;
+          @Anchor = (Width: 180, Left: 8);
+          Text: "";
+        }
+      }
+    }
+
+    // Arrow buttons: use square image buttons, overlapping the left/right edges of the card, centered vertically
+    Button #PrevButton {
+      @Sounds = $Sounds.@ButtonsLight;
+      Anchor: (Width: 90, Height: 90, Left: 0, Vertical: 0);
+      Style: (Default: (Background: (TexturePath: "../icons/arrow-left.png")), Hovered: (Background: (TexturePath: "../icons/arrow-left.png")), Pressed: (Background: (TexturePath: "../icons/arrow-left.png")), Disabled: (Background: (TexturePath: "../icons/arrow-left.png")));
+      Visible: false;
+    }
+
+    Button #NextButton {
+      @Sounds = $Sounds.@ButtonsLight;
+      Anchor: (Width: 90, Height: 90, Right: 0, Vertical: 0);
+      Style: (Default: (Background: (TexturePath: "../icons/arrow-right.png")), Hovered: (Background: (TexturePath: "../icons/arrow-right.png")), Pressed: (Background: (TexturePath: "../icons/arrow-right.png")), Disabled: (Background: (TexturePath: "../icons/arrow-right.png")));
+      Visible: false;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+        @IslandMenuTopSection = Group {
+          Anchor: (Horizontal: 0, Vertical: 0);
+          LayoutMode: TopScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          Visible: false;
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 10);
+            LayoutMode: Top;
+
+            Label #TopSectionTitle {
+              Anchor: (Horizontal: 0, Height: 24);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+              Text: "Top islands";
+            }
+
+            Label #TopSectionDescription {
+              Anchor: (Horizontal: 0, Height: 16, Top: 2);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+              Text: "Search by player, owner or island name.";
+            }
+          }
+
+          Group #TopSearchRow {
+            Anchor: (Height: 44, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Padding: (Top: 6, Bottom: 6);
+
+            Group {
+              FlexWeight: 1;
+              Anchor: (Height: 32, Right: 8);
+              $C.@TextField #TopSearchField { @Anchor = (Horizontal: 0, Height: 32, Vertical: 0); }
+            }
+
+            $C.@SmallSecondaryTextButton #BtnTopSearch {
+              @Anchor = (Width: 120, Height: 32, Right: 6);
+              Text: "Search";
+            }
+
+            $C.@SmallSecondaryTextButton #BtnTopSearchClear {
+              @Anchor = (Width: 90, Height: 32);
+              Text: "Clear";
+            }
+          }
+
+          Label #TopSearchHint {
+            Anchor: (Horizontal: 0, Height: 16, Bottom: 6);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+            Text: "Top 10 best islands";
+          }
+
+          Group #TopTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 6, Right: 6);
+
+            Label #TopHeaderRank {
+              Anchor: (Width: 90, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Rank";
+            }
+
+            Label #TopHeaderIsland {
+              Anchor: (Width: 380, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Island";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #TopHeaderLevel {
+              Anchor: (Width: 120, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Level";
+            }
+          }
+
+          Label #TopEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No ranked islands available.";
+            Visible: false;
+          }
+
+          Group #TopRow0 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank0 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#1"; } Label #TopIslandName0 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel0 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow1 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank1 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#2"; } Label #TopIslandName1 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel1 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow2 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank2 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#3"; } Label #TopIslandName2 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel2 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow3 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank3 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#4"; } Label #TopIslandName3 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel3 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow4 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank4 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#5"; } Label #TopIslandName4 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel4 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow5 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank5 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#6"; } Label #TopIslandName5 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel5 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow6 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank6 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#7"; } Label #TopIslandName6 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel6 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow7 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank7 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#8"; } Label #TopIslandName7 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel7 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow8 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank8 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#9"; } Label #TopIslandName8 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel8 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+          Group #TopRow9 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 6, Right: 6); Visible: false; Label #TopRank9 { Anchor: (Width: 90, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "#10"; } Label #TopIslandName9 { Anchor: (Width: 380, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } Label #TopIslandLevel9 { Anchor: (Width: 120, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #d7e6f2, HorizontalAlignment: Center, VerticalAlignment: Center); Text: "Lvl. 0"; } }
+        };

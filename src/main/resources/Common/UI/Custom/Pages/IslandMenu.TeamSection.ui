@@ -1,0 +1,235 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+        @IslandMenuTeamSection = Group {
+          Anchor: (Horizontal: 0, Vertical: 0);
+          LayoutMode: TopScrolling;
+          ScrollbarStyle: $C.@DefaultScrollbarStyle;
+          Visible: false;
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 10);
+            LayoutMode: Left;
+
+            Group {
+              FlexWeight: 1;
+              LayoutMode: Top;
+
+              Label #TeamSectionTitle {
+                Anchor: (Horizontal: 0, Height: 24);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 16, TextColor: #ffffff, RenderBold: true);
+                Text: "Team";
+              }
+
+              Label #TeamSectionDescription {
+                Anchor: (Horizontal: 0, Height: 16, Top: 2);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+                Text: "Manage members and roles.";
+              }
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            $C.@SmallSecondaryTextButton #BtnTeamDefaultPermissions {
+              @Anchor = (Width: 220, Height: 32, Right: 6);
+              Text: "Default permissions";
+            }
+
+            $C.@SmallSecondaryTextButton #BtnTeamInviteOpen {
+              @Anchor = (Width: 120, Height: 32);
+              Text: "Invite";
+            }
+          }
+
+          Group #TeamTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 10, Right: 10);
+
+            Label #TeamHeaderName {
+              Anchor: (Width: 170, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Name";
+            }
+
+            Label #TeamHeaderRole {
+              Anchor: (Width: 55, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Role";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #TeamHeaderActions {
+              Anchor: (Width: 310, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Actions";
+            }
+          }
+
+          Label #TeamEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No team members.";
+            Visible: false;
+          }
+
+          Group #TeamMemberRow0 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName0 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole0 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions0 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick0 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead0 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow1 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName1 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole1 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions1 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick1 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead1 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow2 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName2 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole2 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions2 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick2 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead2 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow3 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName3 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole3 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions3 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick3 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead3 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow4 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName4 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole4 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions4 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick4 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead4 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow5 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName5 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole5 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions5 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick5 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead5 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow6 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName6 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole6 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions6 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick6 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead6 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow7 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName7 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole7 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions7 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick7 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead7 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow8 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName8 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole8 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions8 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick8 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead8 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow9 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName9 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole9 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions9 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick9 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead9 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow10 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName10 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole10 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions10 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick10 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead10 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+          Group #TeamMemberRow11 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #TeamMemberName11 { Anchor: (Width: 170, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Label #TeamMemberRole11 { Anchor: (Width: 55, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #9fb2c2, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnTeamPermissions11 { @Anchor = (Width: 100, Height: 28, Vertical: 0); Text: "Permissions"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamKick11 { @Anchor = (Width: 90, Height: 28, Vertical: 0); Text: "Supprimer"; } Group { Anchor: (Width: 6); } $C.@SmallSecondaryTextButton #BtnTeamMakeLead11 { @Anchor = (Width: 108, Height: 28, Vertical: 0); Text: "Make lead"; } }
+
+          Group { Anchor: (Horizontal: 0, Height: 1, Top: 8, Bottom: 10); Background: (Color: #3a465c); }
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 8);
+            LayoutMode: Left;
+
+            Group {
+              FlexWeight: 1;
+              LayoutMode: Top;
+
+              Label #TeamCoopTitle {
+                Anchor: (Horizontal: 0, Height: 22);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 15, TextColor: #ffffff, RenderBold: true);
+                Text: "Coop";
+              }
+
+              Label #TeamCoopDescription {
+                Anchor: (Horizontal: 0, Height: 16, Top: 2);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+                Text: "Manage coop access list.";
+              }
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            $C.@SmallSecondaryTextButton #BtnCoopOpen {
+              @Anchor = (Width: 150, Height: 32);
+              Text: "Coop";
+            }
+          }
+
+          Group #CoopTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 10, Right: 10);
+
+            Label #CoopHeaderName {
+              Anchor: (Width: 420, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Name";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #CoopHeaderAction {
+              Anchor: (Width: 110, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Action";
+            }
+          }
+
+          Label #CoopEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No coop players.";
+            Visible: false;
+          }
+
+          Group #CoopRow0 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName0 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove0 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow1 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName1 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove1 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow2 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName2 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove2 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow3 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName3 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove3 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow4 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName4 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove4 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow5 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName5 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove5 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow6 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName6 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove6 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow7 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName7 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove7 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow8 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName8 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove8 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #CoopRow9 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #CoopName9 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnCoopRemove9 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+
+          Group { Anchor: (Horizontal: 0, Height: 1, Top: 8, Bottom: 10); Background: (Color: #3a465c); }
+
+          Group {
+            Anchor: (Horizontal: 0, Bottom: 8);
+            LayoutMode: Left;
+
+            Group {
+              FlexWeight: 1;
+              LayoutMode: Top;
+
+              Label #TeamBanTitle {
+                Anchor: (Horizontal: 0, Height: 22);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 15, TextColor: #ffffff, RenderBold: true);
+                Text: "Ban & Expel";
+              }
+
+              Label #TeamBanDescription {
+                Anchor: (Horizontal: 0, Height: 16, Top: 2);
+                Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+                Text: "Manage banned players and expel from island.";
+              }
+            }
+
+            Group { Anchor: (Width: 8); }
+
+            $C.@SmallSecondaryTextButton #BtnExpelOpen {
+              @Anchor = (Width: 120, Height: 32, Right: 6);
+              Text: "Expel";
+            }
+
+            $C.@SmallSecondaryTextButton #BtnBanOpen {
+              @Anchor = (Width: 120, Height: 32);
+              Text: "Ban";
+            }
+          }
+
+          Group #BanTableHeader {
+            Anchor: (Height: 30, Horizontal: 0, Bottom: 4);
+            LayoutMode: Left;
+            Background: (Color: #101925);
+            Padding: (Left: 10, Right: 10);
+
+            Label #BanHeaderName {
+              Anchor: (Width: 420, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, VerticalAlignment: Center);
+              Text: "Name";
+            }
+
+            Group { FlexWeight: 1; }
+
+            Label #BanHeaderAction {
+              Anchor: (Width: 110, Height: 18, Vertical: 0);
+              Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #8fa5b7, RenderBold: true, HorizontalAlignment: Center, VerticalAlignment: Center);
+              Text: "Action";
+            }
+          }
+
+          Label #BanEmptyLabel {
+            Anchor: (Horizontal: 0, Height: 18, Bottom: 4);
+            Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #6f8495);
+            Text: "No banned players.";
+            Visible: false;
+          }
+
+          Group #BanRow0 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName0 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove0 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow1 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName1 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove1 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow2 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName2 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove2 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow3 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName3 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove3 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow4 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName4 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove4 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow5 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName5 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove5 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow6 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName6 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove6 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow7 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName7 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove7 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow8 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName8 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove8 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+          Group #BanRow9 { Anchor: (Height: 34, Horizontal: 0, Bottom: 4); LayoutMode: Left; Background: (Color: #223149); Padding: (Left: 10, Right: 10); Visible: false; Label #BanName9 { Anchor: (Width: 420, Height: 18, Vertical: 0); Style: (...$C.@DefaultLabelStyle, FontSize: 12, TextColor: #ffffff, VerticalAlignment: Center); Text: ""; } Group { FlexWeight: 1; } $C.@SmallSecondaryTextButton #BtnBanRemove9 { @Anchor = (Width: 110, Height: 28, Vertical: 0); Text: "Supprimer"; } }
+        };

@@ -1,0 +1,68 @@
+$C = "../Common.ui";
+$Sounds = "../Sounds.ui";
+
+@CreateTemplateSection = Group {
+  LayoutMode: Top;
+
+  Group {
+    Anchor: (Horizontal: 0, Height: 1, Top: 10, Bottom: 14);
+    Background: (Color: #3a465c);
+  }
+
+  Label #CreateSectionTitle {
+    Anchor: (Horizontal: 0, Height: 28, Bottom: 4);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 17, TextColor: #ffffff, RenderBold: true);
+    Text: "Creation d'ile";
+  }
+
+  Label #CreateSectionSubtitle {
+    Anchor: (Horizontal: 0, Height: 18, Bottom: 10);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 11, TextColor: #7f8fa3);
+    Text: "Selectionnez une zone BuilderTools avec bedrock puis ouvrez le formulaire.";
+  }
+
+  Group #ZoneBox {
+    Anchor: (Horizontal: 0, Bottom: 14);
+    LayoutMode: Left;
+    Background: (Color: #355073(0.95));
+    Padding: (Left: 16, Right: 12, Top: 14, Bottom: 14);
+
+    Group {
+      FlexWeight: 1;
+      LayoutMode: Middle;
+
+      Group #ZoneStatusDefault {
+        Anchor: (Horizontal: 0, Height: 30);
+        Label #ZoneStatusDefaultLabel {
+          Anchor: (Horizontal: 0, Height: 30);
+          Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #d8e8ff, VerticalAlignment: Center, Wrap: true);
+          Text: "Aucune zone selectionnee.";
+        }
+      }
+
+      Label #ZoneStatusGreen {
+        Anchor: (Horizontal: 0, Height: 30);
+        Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #4caf50, RenderBold: true, VerticalAlignment: Center);
+        Text: "Zone valide, vous pouvez creer l'ile !";
+        Visible: false;
+      }
+    }
+
+    Group {
+      Anchor: (Width: 174);
+      LayoutMode: Middle;
+      $C.@TextButton #CreateIslandButton {
+        @Sounds = $Sounds.@ButtonsLight;
+        @Anchor = (Width: 164);
+        Text: "Creer l'ile";
+      }
+    }
+  }
+
+  Label #CreateSuccess {
+    Anchor: (Horizontal: 0, Bottom: 14);
+    Style: (...$C.@DefaultLabelStyle, FontSize: 13, TextColor: #4caf50, RenderBold: true, HorizontalAlignment: Center);
+    Text: "Ile ajoutee avec succes !";
+    Visible: false;
+  }
+};

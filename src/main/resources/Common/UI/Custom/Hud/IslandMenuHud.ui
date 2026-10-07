@@ -1,0 +1,120 @@
+Group #IslandMenuHud {
+  Anchor: (Left: 50, Bottom: 38, Width: 328, Height: 176);
+  Background: (TexturePath: "banner.png");
+
+  Group #HudHeader {
+    Anchor: (Horizontal: 0, Top: 22, Height: 24);
+    LayoutMode: Middle;
+    Visible: false;
+  }
+
+  Group #HudImageContainer {
+    Anchor: (Top: 30, Width: 172, Height: 83);
+    LayoutMode: Middle;
+    Background: (TexturePath: "../Pages/island.png");
+
+    Group #HudIslandNameRow {
+      Anchor: (Horizontal: 0, Height: 24, Top: 6);
+      LayoutMode: Middle;
+
+      Label #HudIslandName {
+        Text: "";
+        Style: (FontSize: 16, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Center);
+        Anchor: (Height: 24, Horizontal: 0);
+      }
+    }
+  }
+
+  Group #LevelsBar {
+    Anchor: (Horizontal: 0, Bottom: 0, Width: 328, Height: 53);
+    Background: (TexturePath: "levels_bg.png");
+    Visible: true;
+
+    Group {
+      Anchor: (Horizontal: 0);
+      LayoutMode: Left;
+      Padding: (Horizontal: 0);
+
+      Group { FlexWeight: 1; }
+
+      Group {
+        FlexWeight: 3;
+        LayoutMode: Top;
+        Padding: (Left: 24);
+
+        Group {
+          LayoutMode: Left;
+          Anchor: (Horizontal: 0);
+
+          Label #HudTopTitle {
+            Text: "Top";
+            Style: (FontSize: 14, TextColor: #B9C5CF, RenderBold: true, HorizontalAlignment: Start);
+            Anchor: (Height: 16, Top: 5);
+          }
+
+          Group { Anchor: (Width: 4); }
+
+          Label #HudTopValue {
+            Text: "1203";
+            Style: (FontSize: 14, TextColor: #B9C5CF, RenderBold: true, HorizontalAlignment: Start);
+            Anchor: (Height: 18, Top: 5);
+          }
+        }
+
+        Label #HudIslandLevel {
+          Text: "Lvl. 140";
+          Style: (FontSize: 16, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Start);
+          Anchor: (Height: 20, Top: 5);
+        }
+      }
+
+      Group { FlexWeight: 1; }
+
+      Group {
+        FlexWeight: 3;
+        LayoutMode: Top;
+        Padding: (Right: -15);
+
+        Label #HudNextTitle {
+          Text: "Rank up";
+          Style: (FontSize: 12, TextColor: #B9C5CF, RenderBold: false, HorizontalAlignment: End);
+          Anchor: (Height: 16, Top: 5);
+        }
+
+        Group {
+          Anchor: (Horizontal: 0, Height: 20, Top: 5);
+          LayoutMode: Left;
+
+          Group { FlexWeight: 1; }
+
+          Label #HudNextValuePrefix {
+            Text: "in";
+            Style: (FontSize: 14, TextColor: #ff66cc, RenderBold: true, HorizontalAlignment: Start);
+            Anchor: (Height: 18);
+          }
+
+          Group { Anchor: (Width: 4); }
+
+          Label #HudNextValue {
+            Text: "4 lvls";
+            Style: (FontSize: 14, TextColor: #ffffff, RenderBold: true, HorizontalAlignment: Start);
+            Anchor: (Height: 18);
+          }
+        }
+      }
+
+      Group { FlexWeight: 1; }
+    }
+  }
+
+  Group #HudFallback {
+    Anchor: (Horizontal: 0, Top: 0, Bottom: 0);
+    Visible: false;
+
+    Label #HudNoIslandText {
+      Text: "";
+      Style: (FontSize: 14, TextColor: #ffffff, RenderBold: false, HorizontalAlignment: Center, Wrap: true);
+      Anchor: (Height: 40, Horizontal: 0, Top: 40);
+    }
+  }
+}
